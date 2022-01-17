@@ -1,4 +1,5 @@
 <template>
+	<LandingSite />
 	<div class="divider">
 		<MainArticles
 			:title="getTitle(1)"
@@ -15,7 +16,7 @@
 
 <script>
 import prototypeData from '../../assets/database.js';
-
+import LandingSite from '../components/LandingSite.vue';
 import MainArticles from '../components/MainArticles.vue';
 
 export default {
@@ -44,6 +45,7 @@ export default {
 	},
 
 	components: {
+		LandingSite,
 		MainArticles,
 	},
 };
