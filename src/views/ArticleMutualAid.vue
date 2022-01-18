@@ -11,7 +11,9 @@
 	},
 
 	data() {
-		return {};
+		return {
+			index: 3,
+		};
 	},
 };
 </script>
