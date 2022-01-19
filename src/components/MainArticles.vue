@@ -23,7 +23,6 @@ export default {
 
 <style>
 .articles {
-	font-family: 'JetBrains';
 	text-align: center;
 	margin: 0 1rem;
 }
