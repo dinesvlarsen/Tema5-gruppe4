@@ -1,4 +1,5 @@
 <template>
+	<JournalSlideshow />
 	<LandingSite :title="getTitle(0)" :lead="getLead(0)" :image="getImage(0)" />
 	<div class="divider">
 		<MainArticles
@@ -12,7 +13,6 @@
 			:image="getImage(2)"
 		/>
 	</div>
-	<JournalSlideshow />
 </template>
 
 <script>
@@ -44,6 +44,24 @@ export default {
 		getArticle(index) {
 			return this.data.articles[index].body[0];
 		},
+
+		//Might not need this because I use data inside of slideshow...!!!!!!!
+		// //Gets journal data you need based on index and data.
+		// getJournalTitle(index) {
+		// 	return this.data.journal[index].title;
+		// },
+
+		// getJournalArtist(index) {
+		// 	return this.data.journal[index].artist;
+		// },
+
+		// getJournalLocation(index) {
+		// 	return this.data.journal[index].location;
+		// },
+
+		// getJournalImage(index) {
+		// 	return this.data.journal[index].image;
+		// },
 	},
 
 	components: {
