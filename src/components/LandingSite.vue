@@ -39,23 +39,25 @@ export default {
 .landingSite {
   display: flex;
   flex-direction: column;
-
   font-family: "JetBrains";
   text-align: center;
 }
 
 .landingSite__latest {
   margin: 0.5em auto;
-  font-size: 28px;
+  font-size: 30px;
 }
 
 .landingSite__header {
   margin: 0.5em auto;
   max-width: 27ch;
+  font-size: 50px;
 }
 
 .landingSite__paragraph {
-  margin: 0.5em auto;
+  margin: auto 1em;
+  font-size: 30px;
+  font-size: 20px;
 }
 
 .landingSite__image {
@@ -70,6 +72,7 @@ export default {
 
   .landingSite__paragraph {
     max-width: 60ch;
+    margin: 0.5em auto;
   }
 }
 </style>
