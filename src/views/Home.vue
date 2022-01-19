@@ -1,52 +1,63 @@
 <template>
-  <LandingSite :title="getTitle(0)" :lead="getLead(0)" :image="getImage(0)" />
-  <div class="divider">
-    <MainArticles
-      :title="getTitle(1)"
-      :lead="getLead(1)"
-      :image="getImage(1)"
-    />
-    <MainArticles
-      :title="getTitle(2)"
-      :lead="getLead(2)"
-      :image="getImage(2)"
-    />
-  </div>
+	<LandingSite :title="getTitle(0)" :lead="getLead(0)" :image="getImage(0)" />
+
+	<div class="divider">
+		<MainArticles
+			:title="getTitle(1)"
+			:lead="getLead(1)"
+			:image="getImage(1)"
+		/>
+		<MainArticles
+			:title="getTitle(2)"
+			:lead="getLead(2)"
+			:image="getImage(2)"
+		/>
+	</div>
 </template>
 
 <script>
-import prototypeData from "../../assets/database.js";
-import LandingSite from "../components/LandingSite.vue";
-import MainArticles from "../components/MainArticles.vue";
+import prototypeData from '../../assets/database.js';
+import LandingSite from '../components/LandingSite.vue';
+import MainArticles from '../components/MainArticles.vue';
 
 export default {
-  data() {
-    return {
-      data: prototypeData,
-    };
-  },
+	data() {
+		return {
+			//Stores all the data imported from database.js into the data property.
+			data: prototypeData,
+		};
+	},
 
-  methods: {
-    getTitle(index) {
-      return this.data.articles[index].title;
-    },
+	methods: {
+		//Methods to fetch data from the articles database, index references the index position of the articles [The Institute of the cosmos, Jimmie Durham, Mutual Aid]
+		getTitle(index) {
+			return this.data.articles[index].title;
+		},
 
-    getLead(index) {
-      return this.data.articles[index].lead;
-    },
+		getSlug(index) {
+			return this.data.articles[index].slug;
+		},
 
-    getImage(index) {
-      return this.data.articles[index].preview.image;
-    },
+		getLead(index) {
+			return this.data.articles[index].lead;
+		},
 
-    getArticle(index) {
-      return this.data.articles[index].body[0];
-    },
-  },
+		getImage(index) {
+			return this.data.articles[index].preview.image;
+		},
 
-  components: {
-    LandingSite,
-    MainArticles,
-  },
+		getImageCaption(index) {
+			return this.data.articles[index].preview.caption;
+		},
+		//Gets the body of an article by specifying which article you want (see line 30)
+		getArticle(index) {
+			return this.data.articles[index].body[0];
+		},
+	},
+
+	components: {
+		LandingSite,
+		MainArticles,
+	},
 };
 </script>
