@@ -14,11 +14,11 @@
 	data() {
 		return {
 			database: {
-					title: data.articles[2].title,
-					author: data.articles[2].author,
-					body: data.articles[2].body,
-					image: data.articles[2].preview.image,
-					caption: data.articles[2].preview.caption,
+					title: data.articles[0].title,
+					author: data.articles[0].author,
+					body: data.articles[0].body,
+					image: data.articles[0].preview.image,
+					caption: data.articles[0].preview.caption,
 				}
 		};
 	},
