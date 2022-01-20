@@ -167,7 +167,6 @@ export default {
 	border-radius: 50%;
 	width: 24px;
 	height: 24px;
-	background: transparent;
 	border: 2px solid white;
 	margin-bottom: 0.8rem;
 	-webkit-tap-highlight-color: transparent;
