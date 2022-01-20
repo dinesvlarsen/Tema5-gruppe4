@@ -1,5 +1,4 @@
 <template>
-
 	<LandingSite
 		:title="getArticleData(0, 'title')"
 		:lead="getArticleData(0, 'lead')"
@@ -24,6 +23,8 @@
 		/>
 	</div>
 
+	<Books />
+
 	<JournalSlideshow />
 </template>
 
@@ -31,6 +32,7 @@
 import prototypeData from '../../assets/database.js';
 import LandingSite from '../components/LandingSite.vue';
 import MainArticles from '../components/MainArticles.vue';
+import Books from '../components/Books.vue';
 import JournalSlideshow from '../components/JournalSlideshow.vue';
 
 export default {
@@ -59,6 +61,7 @@ export default {
 	components: {
 		LandingSite,
 		MainArticles,
+		Books,
 		JournalSlideshow,
 	},
 };
