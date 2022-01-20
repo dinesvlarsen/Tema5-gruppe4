@@ -1,9 +1,15 @@
 import Home from './views/Home.vue';
-import MainArticles from './views/MainArticles.vue';
 import ArticleMutualAid from './views/ArticleMutualAid.vue';
+import ArticleCosmos from './views/ArticleCosmos.vue';
+import ArticleJimmieDurham from './views/ArticleJimmieDurham.vue';
+
+import Data from './../assets/database.js';
+const data = Data;
+
 
 export default [
 	{ name: 'home', path: '/', component: Home },
-	{ name: 'mainarticles', path: '/', props: true, component: MainArticles },
-	{ name: 'Article-mutual-aid', path: '/mutual-aid-social-distancing-and-dual-power-in-the-state-of-emergency', component: ArticleMutualAid }
+	{ name: 'article-mutual-aid', path: `/${data.articles[0].slug}`, component: ArticleMutualAid },
+	{ name: 'article-jimmie-durham', path: `/${data.articles[1].slug}`, component: ArticleJimmieDurham },
+	{ name: 'article-cosmos', path: `/${data.articles[2].slug}`, component: ArticleCosmos },
 ];
