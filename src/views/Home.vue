@@ -1,5 +1,4 @@
 <template>
-	<JournalSlideshow />
 	<LandingSite :title="getTitle(0)" :lead="getLead(0)" :image="getImage(0)" />
 	<div class="divider">
 		<MainArticles
@@ -13,6 +12,7 @@
 			:image="getImage(2)"
 		/>
 	</div>
+	<JournalSlideshow />
 </template>
 
 <script>
