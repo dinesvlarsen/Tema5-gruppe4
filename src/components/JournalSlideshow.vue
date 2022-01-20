@@ -94,6 +94,11 @@ export default {
 </script>
 
 <style>
+.slideshow__buttons,
+.slideshow__controls {
+	-webkit-tap-highlight-color: transparent; /* Removes blue highlight on click */
+}
+
 .journal {
 	margin: 0 auto;
 	max-width: 1920px;
@@ -120,7 +125,6 @@ export default {
 	z-index: 900;
 	width: 100%;
 	height: 100%;
-	-webkit-tap-highlight-color: transparent; /* Removes blue highlight on click */
 }
 
 .slideshow__previous {
@@ -168,7 +172,6 @@ export default {
 	height: 24px;
 	border: 2px solid white;
 	margin-bottom: 0.8rem;
-	-webkit-tap-highlight-color: transparent;
 }
 
 .slideshow__buttons + .slideshow__buttons {
@@ -190,6 +193,7 @@ export default {
 	.slideshow__titles-container--hide {
 		display: none;
 	}
+
 	.slideshow__titles {
 		font-size: var(--main-header-size);
 	}
