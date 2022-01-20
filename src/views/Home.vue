@@ -1,5 +1,6 @@
 <template>
 	<LandingSite :title="getTitle(0)" :lead="getLead(0)" :image="getImage(0)" />
+
 	<div class="divider">
 		<MainArticles
 			:title="getTitle(1)"
@@ -12,6 +13,7 @@
 			:image="getImage(2)"
 		/>
 	</div>
+
 	<JournalSlideshow />
 </template>
 
@@ -21,18 +23,26 @@ import LandingSite from '../components/LandingSite.vue';
 import MainArticles from '../components/MainArticles.vue';
 import JournalSlideshow from '../components/JournalSlideshow.vue';
 
+
 export default {
 	data() {
 		return {
+    
+			//Stores all the data imported from database.js into the data property.
 			data: prototypeData,
 		};
 	},
 
 	methods: {
+		//Methods to fetch data from the articles database, index references the index position of the articles [The Institute of the cosmos, Jimmie Durham, Mutual Aid]
 		getTitle(index) {
 			return this.data.articles[index].title;
 		},
 
+
+		getSlug(index) {
+			return this.data.articles[index].slug;
+		},
 		getLead(index) {
 			return this.data.articles[index].lead;
 		},
@@ -40,6 +50,7 @@ export default {
 		getImage(index) {
 			return this.data.articles[index].preview.image;
 		},
+
 
 		getArticle(index) {
 			return this.data.articles[index].body[0];
@@ -62,12 +73,23 @@ export default {
 		// getJournalImage(index) {
 		// 	return this.data.journal[index].image;
 		// },
+
+		getImageCaption(index) {
+			return this.data.articles[index].preview.caption;
+		},
+		//Gets the body of an article by specifying which article you want (see line 30)
+		getArticle(index) {
+			return this.data.articles[index].body[0];
+		},
+
 	},
 
 	components: {
 		LandingSite,
 		MainArticles,
+
 		JournalSlideshow,
+
 	},
 };
 </script>
