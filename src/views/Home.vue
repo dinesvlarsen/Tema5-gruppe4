@@ -1,4 +1,5 @@
 <template>
+
 	<LandingSite
 		:title="getArticleData(0, 'title')"
 		:lead="getArticleData(0, 'lead')"
