@@ -1,21 +1,28 @@
 <template>
-	<LandingSite :title="getTitle(0)" :lead="getLead(0)" :image="getImage(0)" />
+	<LandingSite
+		:title="getTitle(0)"
+		:lead="getLead(0)"
+		:image="getImage(0)"
+		:slug="getSlug(0)"
+	/>
 
 	<div class="divider">
 		<MainArticles
 			:title="getTitle(1)"
 			:lead="getLead(1)"
 			:image="getImage(1)"
+			:slug="getSlug(1)"
 		/>
 
 		<!-- This includes the lead and image in the link. Not sure if this should be split up or if RouterLink should be set up on component with a dynamic name (ie :slug from the database) -->
-		<RouterLink :to="{ name: 'article-mutual-aid' }">
-			<MainArticles
-				:title="getTitle(2)"
-				:lead="getLead(2)"
-				:image="getImage(2)"
-			/>
-		</RouterLink>
+		<!-- <RouterLink :to="{ name: 'article-mutual-aid' }"> -->
+		<MainArticles
+			:title="getTitle(2)"
+			:lead="getLead(2)"
+			:image="getImage(2)"
+			:slug="getSlug(2)"
+		/>
+		<!-- </RouterLink> -->
 	</div>
 
 	<JournalSlideshow />
@@ -44,7 +51,7 @@ export default {
 		getSlug(index) {
 			return this.data.articles[index].slug;
 		},
-		
+
 		getLead(index) {
 			return this.data.articles[index].lead;
 		},
