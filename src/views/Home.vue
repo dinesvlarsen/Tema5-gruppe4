@@ -1,20 +1,26 @@
 <template>
-	<LandingSite :title="getTitle(0)" :lead="getLead(0)" :image="getImage(0)" />
+	<LandingSite
+		:title="getArticleData(0, 'title')"
+		:lead="getArticleData(0, 'lead')"
+		:image="getArticleData(0, 'image')"
+		:slug="getArticleData(0, 'slug')"
+	/>
 
 	<div class="divider">
 		<MainArticles
-			:title="getTitle(1)"
-			:lead="getLead(1)"
-			:image="getImage(1)"
+			:title="getArticleData(1, 'title')"
+			:lead="getArticleData(1, 'lead')"
+			:image="getArticleData(1, 'image')"
+			:slug="getArticleData(1, 'slug')"
 		/>
+
 		<!-- This includes the lead and image in the link. Not sure if this should be split up or if RouterLink should be set up on component with a dynamic name (ie :slug from the database) -->
-		<RouterLink :to="{ name: 'article-mutual-aid' }">
-			<MainArticles
-				:title="getTitle(2)"
-				:lead="getLead(2)"
-				:image="getImage(2)"
-			/>
-		</RouterLink>
+		<MainArticles
+			:title="getArticleData(2, 'title')"
+			:lead="getArticleData(2, 'lead')"
+			:image="getArticleData(2, 'image')"
+			:slug="getArticleData(2, 'slug')"
+		/>
 	</div>
 
 	<JournalSlideshow />
@@ -26,73 +32,33 @@ import LandingSite from '../components/LandingSite.vue';
 import MainArticles from '../components/MainArticles.vue';
 import JournalSlideshow from '../components/JournalSlideshow.vue';
 
-
 export default {
 	data() {
 		return {
-    
 			//Stores all the data imported from database.js into the data property.
 			data: prototypeData,
 		};
 	},
 
 	methods: {
-		//Methods to fetch data from the articles database, index references the index position of the articles [The Institute of the cosmos, Jimmie Durham, Mutual Aid]
-		getTitle(index) {
-			return this.data.articles[index].title;
+		//Can use index and  key to access articles from database
+		//key expects a string with one of these:('title', 'slug', 'lead', 'body', 'image', 'caption')
+		getArticleData(index, key) {
+			//Conditionals are here to check if 'image' or 'caption', since they are in their own object.
+			if (key === 'image') {
+				return this.data.articles[index].preview.image;
+			} else if (key === 'caption') {
+				return this.data.articles[index].preview.caption;
+			}
+
+			return this.data.articles[index][key];
 		},
-
-
-		getSlug(index) {
-			return this.data.articles[index].slug;
-		},
-		getLead(index) {
-			return this.data.articles[index].lead;
-		},
-
-		getImage(index) {
-			return this.data.articles[index].preview.image;
-		},
-
-
-		getArticle(index) {
-			return this.data.articles[index].body[0];
-		},
-
-		//Might not need this because I use data inside of slideshow...!!!!!!!
-		// //Gets journal data you need based on index and data.
-		// getJournalTitle(index) {
-		// 	return this.data.journal[index].title;
-		// },
-
-		// getJournalArtist(index) {
-		// 	return this.data.journal[index].artist;
-		// },
-
-		// getJournalLocation(index) {
-		// 	return this.data.journal[index].location;
-		// },
-
-		// getJournalImage(index) {
-		// 	return this.data.journal[index].image;
-		// },
-
-		getImageCaption(index) {
-			return this.data.articles[index].preview.caption;
-		},
-		//Gets the body of an article by specifying which article you want (see line 30)
-		getArticle(index) {
-			return this.data.articles[index].body[0];
-		},
-
 	},
 
 	components: {
 		LandingSite,
 		MainArticles,
-
 		JournalSlideshow,
-
 	},
 };
 </script>
