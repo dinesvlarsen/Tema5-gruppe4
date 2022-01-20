@@ -44,6 +44,7 @@ export default {
 		getSlug(index) {
 			return this.data.articles[index].slug;
 		},
+		
 		getLead(index) {
 			return this.data.articles[index].lead;
 		},
@@ -69,7 +70,6 @@ export default {
 	components: {
 		LandingSite,
 		MainArticles,
-
 		JournalSlideshow,
 	},
 };
