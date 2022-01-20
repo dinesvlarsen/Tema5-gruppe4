@@ -11,21 +11,8 @@
 </template>
 
 <script>
-import prototypeData from "../../assets/database.js";
-
 export default {
-  props: ["title", "lead", "image"],
-  data() {
-    return {
-      firstArticle: {
-        title: prototypeData.articles[0].title,
-        lead: prototypeData.articles[0].lead,
-        body: prototypeData.articles[0].body,
-        slug: prototypeData.articles[0].slug,
-        preview: prototypeData.articles[0].preview,
-      },
-    };
-  },
+  props: ["title", "lead"],
 
   computed: {
     imageLink() {
