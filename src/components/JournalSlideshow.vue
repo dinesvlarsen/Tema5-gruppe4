@@ -155,15 +155,15 @@ export default {
 
 .slideshow__buttons-container {
 	position: absolute;
-	bottom: 0;
 	width: 100%;
+	bottom: 0;
+	z-index: 9000;
 	text-align: center;
+	padding-top: 1rem;
 }
 
 .slideshow__buttons {
 	position: relative;
-	/* Always keep buttons on top with z-index */
-	z-index: 900;
 	border-radius: 50%;
 	width: 24px;
 	height: 24px;
