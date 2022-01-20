@@ -94,7 +94,6 @@ export default {
 </script>
 
 <style>
-/* Placeholder style while developing */
 .journal {
 	margin: 0 auto;
 	max-width: 1920px;
