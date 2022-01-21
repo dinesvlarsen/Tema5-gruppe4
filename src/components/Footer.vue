@@ -3,6 +3,7 @@
 		<h3 class="footer__logo">in(dex)</h3>
 		<div class="footer-container-menu">
 			<div class="footer__address">
+				<!-- You can get this information from database.js in assets. Look in the database.js file on line 15 -->
 				<ul>
 					<li>172 Classon Avenue</li>
 					<li>Brooklyn, NY 11205</li>
@@ -36,11 +37,6 @@ export default {};
 	font-style: normal;
 	letter-spacing: 0em;
 	text-align: left;
-	height: 289px;
-	max-width: 1920px;
-	left: 0px;
-	top: 1498px;
-	border-radius: 0px;
 	margin-top: 7.5rem;
 	padding: 1.25rem;
 }
@@ -53,7 +49,6 @@ export default {};
 .footer-container-menu {
 	display: flex;
 	gap: 3rem;
-	padding: 0px;
 }
 
 .footer__address {
