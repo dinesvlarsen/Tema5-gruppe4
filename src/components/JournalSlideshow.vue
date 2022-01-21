@@ -114,7 +114,6 @@ export default {
 .slideshow {
 	position: relative;
 	height: auto;
-	margin: 0 1rem;
 }
 
 .slideshow__controls {
