@@ -22,6 +22,7 @@ export default {
 	articles: [
 		{
 			title: 'The Institute of the Cosmos',
+			author: 'Krzysztof Gutfranski',
 			slug: 'the-institute-of-the-cosmos',
 			lead: 'The Institute of the Cosmos is an ongoing collective research project founded in 2019. Informed by the historical ideas of Russian Cosmism, the Institute is a space for a creative investigation of the materiality of the cosmos and its strange universalism, from the perspectives of philosophy, anthropology, history of science, and art.',
 			body: [
@@ -53,6 +54,7 @@ export default {
 		},
 		{
 			title: 'Mutual Aid, Social Distancing, and Dual Power in the State of Emergency',
+			author: 'Daniel Birnbaum',
 			slug: 'mutual-aid-social-distancing-and-dual-power-in-the-state-of-emergency',
 			lead: `For the elites, this might be an ungovernable world. But we still have many worlds to propagate, to live and love in comradely care.`,
 			body: [
@@ -72,28 +74,28 @@ export default {
 		{
 			title: 'Radicalizing Care',
 			writers: 'Birgit Bosold, Lena Fritsch, Vera Hofmann, Elke Krasny, Sophie Lingg',
-			cover: 'book_1.jpeg'
+			cover: 'book_1.png'
 		},
 		{
 			title: 'Curating the Complex & The Open Strike',
 			writers: 'TERRY SMITH',
-			cover: 'book_2.jpeg'
+			cover: 'book_2.png'
 		},
 		{
 			title: 'Amazonia',
 			writers: 'KATERYNA BOTANOVA, QUINN LATIMER',
-			cover: 'book_3.jpeg'
+			cover: 'book_3.png'
 		},
 		{
 
 			title: 'Parapolitics',
 			writers: 'ANSELM FRANKE, NIDA GHOUSE, PAZ GUEVARA, ANTONIA MAJACA (EDS.)',
-			cover: 'book_4.jpeg'
+			cover: 'book_4.png'
 		},
 		{
 			title: 'Visual Cultures as Time Travel',
 			writers: 'HENRIETTE GUNKEL, AYESHA HAMEED',
-			cover: 'book_5.jpeg'
+			cover: 'book_5.png'
 		},
 		{
 			title: 'Dear Navigator',

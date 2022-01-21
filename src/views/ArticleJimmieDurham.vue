@@ -20,11 +20,11 @@ export default {
 	data() {
 		return {
 			database: {
-				title: data.articles[2].title,
-				author: data.articles[2].author,
-				body: data.articles[2].body,
-				image: data.articles[2].preview.image,
-				caption: data.articles[2].preview.caption,
+				title: data.articles[1].title,
+				author: data.articles[1].author,
+				body: data.articles[1].body,
+				image: data.articles[1].preview.image,
+				caption: data.articles[1].preview.caption,
 			},
 		};
 	},

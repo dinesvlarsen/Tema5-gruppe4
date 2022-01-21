@@ -1,21 +1,26 @@
 <template>
 	<section class="articles">
-		<h2 class="articles__header">{{ title }}</h2>
+		<RouterLink :to="routerLink">
+			<h2 class="articles__header">{{ title }}</h2>
 
-		<p class="articles__paragraph">
-			{{ lead }}
-		</p>
+			<p class="articles__paragraph">
+				{{ lead }}
+			</p>
+		</RouterLink>
 		<img class="articles__image" :src="imageLink" />
 	</section>
 </template>
 
 <script>
 export default {
-	props: ['title', 'lead', 'image'],
+	props: ['title', 'lead', 'image', 'slug'],
 
 	computed: {
 		imageLink() {
 			return '../../assets/images/' + this.image;
+		},
+		routerLink() {
+			return `/${this.slug}`;
 		},
 	},
 };
@@ -23,7 +28,6 @@ export default {
 
 <style>
 .articles {
-	font-family: 'JetBrains';
 	text-align: center;
 	margin: 0 1rem;
 }
