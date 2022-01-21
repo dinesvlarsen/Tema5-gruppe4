@@ -1,13 +1,15 @@
 <template>
-	<div>{{ author }}</div>
-	<h1> {{ title }}  </h1>
-	<div>
-		<figure>
-			 <img :src="'../../assets/images/' + `${image}`" />
-			<figcaption> {{ caption }} </figcaption>
-		</figure>
+	<div class="article-container">
+		<div>{{ author }}</div>
+		<h1> {{ title }}  </h1>
+		<div>
+			<figure>
+				<img :src="'../../assets/images/' + `${image}`" />
+				<figcaption> {{ caption }} </figcaption>
+			</figure>
+		</div>
+		<div> {{ body }} </div>
 	</div>
-	<div> {{ body }} </div>
 </template>
 
 <script>
@@ -21,4 +23,10 @@
 	}
 </script>
 
-<style></style>
+<style>
+
+.article-container {
+	white-space: pre-line;
+	}
+	
+</style>
