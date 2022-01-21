@@ -45,6 +45,8 @@ export default {
 				caption: `Liz Craft, She is looking at me, 2015. Ceramic, aluminium, 84 x 82 x 12 cm.`
 			},
 		},
+		// This article was missing an author and caption, so I added something
+		// to fill the space.
 		{
 			title: 'Jimmie Durham',
 			author: 'Jimmie Durham',
@@ -60,7 +62,7 @@ export default {
 				The back gallery showcases imPOSSIBLE Conversations, a 2013 installation-based work that carries the thread of these early experiments forward into work made before Rapoport’s death in 2015 and expands their possibility for manipulation and iteration by adding a social dimension. Drawing on Alvin Roth and Lloyd Shapley’s economic theories about how audiences, institutions, and companies form stable matches within markets, Rapoport made black-and-white, 8 x 10” photographs of a selection of these early fabric paintings, and then paired each with an advertisement page from editions of The New York Times to form a collaged, composite artwork. She then invited ten viewers to assign a headline from other advertisements to the ten artworks, installing the new headlines directly above the composites. The resulting pairings are uncanny: both in the way her paintings echo the forms in the advertisements, and in how the viewers assign content and even humor to the visual information. In this work, as across this show, Rapoport is an artist-engineer, coding and riffing on the internal structures of her artworks to create new visual data for the viewer.`,
 			preview: {
 				image: 'article_2.jpeg',
-				caption: ''
+				caption: 'Bullseye (1966)'
 			}
 		},
 		{

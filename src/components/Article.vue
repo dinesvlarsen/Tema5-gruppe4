@@ -2,12 +2,11 @@
 	<div class="article-container">
 		<div>{{ author }}</div>
 		<h1> {{ title }}  </h1>
-		<div>
 			<figure>
 				<img :src="'../../assets/images/' + `${image}`" />
 				<figcaption> {{ caption }} </figcaption>
+				<br><br>
 			</figure>
-		</div>
 		<div> {{ body }} </div>
 	</div>
 </template>
@@ -28,5 +27,13 @@
 .article-container {
 	white-space: pre-line;
 	}
-	
+
+.article-container div, .article-container figcaption {
+	margin: var(--margin);
+}	
+
+.article-container h1 {
+	margin: 0.1em;
+}
+
 </style>
