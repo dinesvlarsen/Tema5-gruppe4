@@ -13,6 +13,7 @@
         <a href="#news">News</a>
         <a href="#contact">Contact</a>
         <a href="#about">About</a>
+        <a href="#about">About</a>
       </div>
       <a href="javascript:void(0);" class="icon" onclick="myFunction()">
         <i class="fa fa-bars"></i>
@@ -22,8 +23,6 @@
 </template>
 
 <style>
-
-
 .topnav {
   overflow: hidden;
   background-color: white;
