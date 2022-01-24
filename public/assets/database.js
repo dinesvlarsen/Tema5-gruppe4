@@ -42,7 +42,8 @@ export default {
 				Despite our meagre budget, we managed to increase our fees for authors—regardless of their celebrity status or passport—as well as the fees for translators, guest editors, and all freelancers involved, to increase our reach and international community. Because of this, I believe, we were successful. After writing an essay for Obieg, someone from Lagos was granted a stipend in Johannesburg. Someone else came up with the idea of a biennial in northern Chile. New projects were conceived in Kyiv, Rijeka, Vilnius, and many other places. Channeled through Warsaw, people and ideas connected in fruitful collaboration.`,
 			preview: {
 				image: 'article_1.jpeg',
-				caption: `Liz Craft, She is looking at me, 2015. Ceramic, aluminium, 84 x 82 x 12 cm.`
+				caption: `Liz Craft, She is looking at me, 2015. Ceramic, aluminium, 84 x 82 x 12 cm.`,
+				alt: `A photograph of an art installation, showing an announcer's desk with two microphones, against a backdrop showing the image of a city.`
 			},
 		},
 		// This article was missing an author and caption, so I added something
@@ -62,7 +63,8 @@ export default {
 				The back gallery showcases imPOSSIBLE Conversations, a 2013 installation-based work that carries the thread of these early experiments forward into work made before Rapoport’s death in 2015 and expands their possibility for manipulation and iteration by adding a social dimension. Drawing on Alvin Roth and Lloyd Shapley’s economic theories about how audiences, institutions, and companies form stable matches within markets, Rapoport made black-and-white, 8 x 10” photographs of a selection of these early fabric paintings, and then paired each with an advertisement page from editions of The New York Times to form a collaged, composite artwork. She then invited ten viewers to assign a headline from other advertisements to the ten artworks, installing the new headlines directly above the composites. The resulting pairings are uncanny: both in the way her paintings echo the forms in the advertisements, and in how the viewers assign content and even humor to the visual information. In this work, as across this show, Rapoport is an artist-engineer, coding and riffing on the internal structures of her artworks to create new visual data for the viewer.`,
 			preview: {
 				image: 'article_2.jpeg',
-				caption: 'Bullseye (1966)'
+				caption: 'Bullseye (1966)',
+				alt: `A woodblock print depicting a factory, with factory workers walking in front. `
 			}
 		},
 		{
@@ -80,7 +82,8 @@ export default {
 				Within this context of cybernetic systems of governance, control has become the guaranteed form of “truth.” That is, the assured path to “truth” is to shape the futurity of “truth” in the present. Thus, rather than try to prevent or deter the existence of what is empirically verifiable, cybernetic systems of control work via a play on temporality that manufactures a becoming-assemblage such as an event, organization,  in the form of a threat, an anxiety, or desire to mold futurity in the present (or present futurity). In other words, regardless of whether a becoming-assemblage is empirically or objectively verifiable, a future event is constructed based on already existing predispositions or beliefs. The operative logic for such an environment of manufactured futurity is preemptive action.`,
 			preview: {
 				image: 'article_3.jpeg',
-				caption: `Cover of Obieg 12: “The Speed of Guccifer.” The studio of TV UNU in the Romanian city of Râmnicu Vâlcea (a.k.a. Hackerville). Photo: Nicoleta Moise.`
+				caption: `Cover of Obieg 12: “The Speed of Guccifer.” The studio of TV UNU in the Romanian city of Râmnicu Vâlcea (a.k.a. Hackerville). Photo: Nicoleta Moise.`,
+				alt: `A photo of a bedroom with floral wallpaper, showing a bed with an ornate backboard and sheets with a floral print. To the side there is a nightstand with a cord phone, and a lamp on the wall.`
 			},
 		},
 	],
@@ -89,33 +92,39 @@ export default {
 		{
 			title: 'Radicalizing Care',
 			writers: 'Birgit Bosold, Lena Fritsch, Vera Hofmann, Elke Krasny, Sophie Lingg',
-			cover: 'book_1.png'
+			cover: 'book_1.png',
+			alt: 'An all pink book cover, with a cut off photo to the right showing an indeterminate human body part.'
 		},
 		{
 			title: 'Curating the Complex & The Open Strike',
 			writers: 'TERRY SMITH',
-			cover: 'book_2.png'
+			cover: 'book_2.png',
+			alt: 'An all yellow book cover with black text.'
 		},
 		{
 			title: 'Amazonia',
 			writers: 'KATERYNA BOTANOVA, QUINN LATIMER',
-			cover: 'book_3.png'
+			cover: 'book_3.png',
+			alt: 'A book cover with a stylized image of a large fish, snake and two people, surrounded by smaller fish. '
 		},
 		{
 
 			title: 'Parapolitics',
 			writers: 'ANSELM FRANKE, NIDA GHOUSE, PAZ GUEVARA, ANTONIA MAJACA (EDS.)',
-			cover: 'book_4.png'
+			cover: 'book_4.png',
+			alt: 'An all grey book cover with stark red text.'
 		},
 		{
 			title: 'Visual Cultures as Time Travel',
 			writers: 'HENRIETTE GUNKEL, AYESHA HAMEED',
-			cover: 'book_5.png'
+			cover: 'book_5.png',
+			alt: 'A book cover with an illustration showing people and eagles laying down, with mountains rising up in the background.'
 		},
 		{
 			title: 'Dear Navigator',
 			writers: 'HU FANG',
-			cover: 'book_6.jpeg'
+			cover: 'book_6.jpeg',
+			alt: 'A book cover with a photo of a brown desert, surrounded by a black frame.'
 		},
 	],
 
@@ -124,19 +133,22 @@ export default {
 			title: 'And My Flames Stay Till You Get Out My Way',
 			artist: 'April Bey',
 			location: 'Museum für Moderne Kunst',
-			image: 'journal_1.jpeg'
+			image: 'journal_1.jpeg',
+			alt: 'Three paintings showing two blue figures with a cowboy-ish outfit in various poses, sat on a pink fence against a bright yellow background.'
 		},
 		{
 			title: 'Crip Time',
 			artist: 'Kenny Fries',
 			location: 'Vienna Art Week',
-			image: 'journal_2.jpeg'
+			image: 'journal_2.jpeg',
+			alt: 'Diorama of an art exhibition. Paintings are hung on string with clothespins, with a small side room filled with potted plants. '
 		},
 		{
 			title: 'Losing Control',
 			artist: 'Alte Pinakothek',
 			location: 'Novuyo Moyo',
-			image: 'journal_3.jpeg'
+			image: 'journal_3.jpeg',
+			alt: 'Photo of an art exhibition. In focus is a painting showing a pink figure, with a halo of hair dressing.'
 		},
 	],
 
