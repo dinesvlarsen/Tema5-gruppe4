@@ -1,19 +1,30 @@
 <template>
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-  </head>
   <body>
-    <div class="topnav">
+    <div class="hamburger__icon">
+      <img
+        src="../../assets/images/header-icons/Hamburger icon.svg"
+        alt="header"
+      />
+    </div>
+    <div class="search__icon">
+      <img
+        src="../../assets/images/header-icons/Search icon.svg"
+        alt="header"
+      />
+    </div>
+    <div class="nav">
       <a href="#home" class="active">In(dex)</a>
+
       <div id="myLinks">
-        <a href="#news">News</a>
-        <a href="#contact">Contact</a>
-        <a href="#about">About</a>
-        <a href="#about">About</a>
+        <a href="#Announchements">Announchements</a>
+        <a href="#Journal">Journal</a>
+        <a href="#Architecture">Architecture</a>
+        <a href="#Video & Film">Video & Film</a>
+        <a href="#Live">Live</a>
+        <a href="#Notes">Notes</a>
+        <a href="#Books">Books</a>
+        <a href="#Projects">Projects</a>
+        <a href="#Podcasts">Podcasts</a>
       </div>
       <a href="javascript:void(0);" class="icon" onclick="myFunction()">
         <i class="fa fa-bars"></i>
@@ -23,29 +34,36 @@
 </template>
 
 <style>
-.topnav {
+.hamburger__icon {
+  width: 40px;
+  float: right;
+  padding: 2px;
+  margin: 20px;
+}
+
+.search__icon {
+  width: 35px;
+  float: right;
+  padding: 3px;
+  margin: 15px;
+}
+
+.nav {
   overflow: hidden;
   background-color: white;
   position: relative;
 }
 
-.topnav #myLinks {
+.nav #myLinks {
   display: none;
 }
 
-.topnav a {
+.nav a {
   color: black;
   padding: 14px 16px;
   text-decoration: none;
-  font-size: 17px;
+  font-size: 25px;
   display: block;
-}
-
-.topnav a.icon {
-  display: block;
-  position: absolute;
-  right: 0;
-  top: 0;
 }
 </style>
 
