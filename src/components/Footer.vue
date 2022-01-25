@@ -74,10 +74,13 @@
       line-height: 40px;
       letter-spacing: 0em;
       text-align: left;
+      margin-top: 3rem;
     }
 
-    .footer__socials {
-      margin-right: 10rem;
+    .footer__socials ul li {
+      margin-right: auto;
     }
+
+   
   }
 </style>
