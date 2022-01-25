@@ -106,9 +106,9 @@ export default {
 
 .journal__header {
 	text-align: center;
-	font-size: 1.875rem;
 	margin-bottom: 2.5rem;
 	margin-top: 6.25rem;
+	font-size: var(--body-font-size);
 }
 
 .slideshow {

@@ -13,10 +13,8 @@
 </template>
 
 <script>
-
 export default {
-  props: ["title", "lead", "image", "slug"],
-
+	props: ['title', 'lead', 'image', 'slug'],
 
 	computed: {
 		imageLink() {
@@ -39,18 +37,16 @@ export default {
 
 .landingSite__latest {
 	margin: 0.5em auto;
-	font-size: 30px;
 }
 
 .landingSite__header {
 	margin: 0.5em auto;
-	font-size: 50px;
 	max-width: 27ch;
 }
 
 .landingSite__paragraph {
 	margin: 0.5em 1em 0.5em;
-	font-size: 20px;
+	font-size: var(--caption-font-size);
 }
 
 .landingSite__image {

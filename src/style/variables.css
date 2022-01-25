@@ -1,8 +1,24 @@
 :root {
-	--main-header-size: 3.125rem;
+	/* Primary Text Sizes */
+	--heading-font-size: 3.125rem;
+	--body-font-size: 1.875rem;
+	--caption-font-size: 1.25rem;
+
+	/* Colors */
 	--primary-color: #000;
-	--secondary-color: #E3E3E3;
-	--highlight-color: #ADFF00;
+	--secondary-color: #e3e3e3;
+	--highlight-color: #adff00;
+
+	/* Spacings */
+	--spacing-small: 1.25rem;
+	--spacing-medium: 2.5rem;
+	--spacing-large: 6.25rem;
 	--margin: 0.5em;
 	--padding: 0.5em;
+}
+
+@media screen and (max-width: 500px) {
+	:root {
+		--heading-font-size: 2rem;
+	}
 }

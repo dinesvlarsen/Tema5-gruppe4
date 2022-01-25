@@ -1,18 +1,20 @@
 <template>
 	<div class="article-container">
-		<div>{{ author }}</div>
+		<div class="article__author">{{ author }}</div>
 		<h1>{{ title }}</h1>
 		<figure>
 			<img :src="'../../assets/images/' + `${image}`" />
 			<figcaption>{{ caption }}</figcaption>
 			<br /><br />
 		</figure>
-		<article
-			class="article-container__article"
-			v-for="article in body"
-			:key="article"
-		>
-			{{ article }}
+		<article>
+			<p
+				class="article-container__paragraph"
+				v-for="paragraph in body"
+				:key="paragraph"
+			>
+				{{ paragraph }}
+			</p>
 		</article>
 		<!-- <div>{{ body }}</div> -->
 	</div>
@@ -29,11 +31,15 @@ export default {
 </script>
 
 <style>
-.article-container__article {
-	margin-bottom: 50px;
+.article-container__paragraph + .article-container__paragraph {
+	margin-top: 50px;
 }
 .article-container {
 	white-space: pre-line;
+}
+
+.article__author {
+	font-size: var(--caption-font-size);
 }
 
 .article-container div,

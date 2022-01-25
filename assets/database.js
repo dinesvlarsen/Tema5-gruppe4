@@ -22,6 +22,7 @@ export default {
 	articles: [
 		{
 			title: 'The Institute of the Cosmos',
+			author: 'Krzysztof Gutfranski',
 			slug: 'the-institute-of-the-cosmos',
 			lead: 'The Institute of the Cosmos is an ongoing collective research project founded in 2019. Informed by the historical ideas of Russian Cosmism, the Institute is a space for a creative investigation of the materiality of the cosmos and its strange universalism, from the perspectives of philosophy, anthropology, history of science, and art.',
 			body: [
@@ -38,6 +39,7 @@ export default {
 		},
 		{
 			title: 'Jimmie Durham',
+			author: 'Jimmie Durham',
 			slug: 'jimmie-durham',
 			lead: `Let others wax eloquent about essences and fixed forms, ethnic identities, automobiles and Opera Houses. For Jimmie the humor was low key, bitter, and funny all at once, something on the move making you smile inwardly while trying to keep up with the shifting focus your unsettled understandings provoked.`,
 			body: [
@@ -53,6 +55,7 @@ export default {
 		},
 		{
 			title: 'Mutual Aid, Social Distancing, and Dual Power in the State of Emergency',
+			author: 'Daniel Birnbaum',
 			slug: 'mutual-aid-social-distancing-and-dual-power-in-the-state-of-emergency',
 			lead: `For the elites, this might be an ungovernable world. But we still have many worlds to propagate, to live and love in comradely care.`,
 			body: [
