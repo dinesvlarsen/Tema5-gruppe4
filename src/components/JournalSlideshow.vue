@@ -205,7 +205,7 @@ export default {
 	}
 
 	.slideshow__titles {
-		font-size: var(--main-header-size);
+		font-size: var(--heading-font-size);
 	}
 
 	.slideshow__buttons {
