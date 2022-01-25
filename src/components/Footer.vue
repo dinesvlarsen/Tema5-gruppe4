@@ -38,7 +38,7 @@ export default {};
 
 .footer__logo {
 	font-weight: normal;
-	margin-right: 30%;
+	margin-right: 40%;
 }
 
 .footer__information {
@@ -54,6 +54,7 @@ export default {};
 	.footer__logo {
 		margin-right: 30%;
 	}
+
 	.footer__address {
 		display: none;
 	}
