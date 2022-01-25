@@ -42,6 +42,7 @@ export default {
 	margin: 0 auto;
 	margin-top: 1.25rem;
 	max-width: 52ch;
+	font-size: var(--caption-font-size);
 }
 
 .articles__image {
