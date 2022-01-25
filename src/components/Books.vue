@@ -58,6 +58,9 @@ export default {
 }
 
 .library {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 10px;
 	margin: 0 1rem;
 }
 
@@ -74,13 +77,9 @@ export default {
 	font-size: 1.25rem;
 	margin-bottom: 0.5rem;
 }
-.book__writers {
-	font-size: 1rem;
-}
 
 @media screen and (min-width: 600px) {
 	.library {
-		display: grid;
 		max-width: 1920px;
 		grid-template-columns: repeat(3, 1fr);
 		gap: 10px;
