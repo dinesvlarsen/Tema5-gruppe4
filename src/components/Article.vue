@@ -50,4 +50,11 @@ export default {
 .article-container h1 {
 	margin: 0.1em;
 }
+
+@media (min-width: 1280px) {
+	.article-container {
+		margin: auto;
+		width: 1260px;
+	}
+}
 </style>

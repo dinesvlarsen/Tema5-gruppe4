@@ -62,7 +62,21 @@ export default {};
 		display: none;
 	}
 	.footer-container {
+		font-size: 15px;
 		gap: 15rem;
+		margin-left: 1rem;
+		padding: 0;
+		font-family: JetBrains Mono;
+		font-size: 30px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 40px;
+		letter-spacing: 0em;
+		text-align: left;
+	}
+
+	.footer__socials {
+		margin-right: 10rem;
 	}
 }
 </style>
