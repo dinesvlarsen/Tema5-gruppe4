@@ -5,6 +5,7 @@
 		:body="database.body"
 		:image="database.image"
 		:caption="database.caption"
+		:alt="database.alt"
 	/>
 </template>
 
@@ -25,6 +26,7 @@ export default {
 				body: data.articles[2].body,
 				image: data.articles[2].preview.image,
 				caption: data.articles[2].preview.caption,
+				alt: data.articles[2].preview.alt
 			},
 		};
 	},

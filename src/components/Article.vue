@@ -3,7 +3,7 @@
 		<div class="article__author">{{ author }}</div>
 		<h1>{{ title }}</h1>
 		<figure>
-			<img :src="'../../assets/images/' + `${image}`" />
+			<img :src="'../../assets/images/' + `${image}`" :alt="alt" />
 			<figcaption>{{ caption }}</figcaption>
 			<br /><br />
 		</figure>
@@ -22,7 +22,7 @@
 
 <script>
 export default {
-	props: ['title', 'author', 'body', 'image', 'caption'],
+	props: ['title', 'author', 'body', 'image', 'caption', 'alt'],
 
 	data() {
 		return {};
@@ -34,12 +34,9 @@ export default {
 .article-container__paragraph + .article-container__paragraph {
 	margin-top: 50px;
 }
-.article-container {
-	white-space: pre-line;
-}
 
 .article__author {
-	font-size: var(--caption-font-size);
+	font-size: var(--body-font-size);
 }
 
 .article-container div,
