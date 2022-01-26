@@ -40,6 +40,7 @@
 	top: 0;
 	left: 0;
 }
+
 .active {
 	font-size: 30px;
 }
