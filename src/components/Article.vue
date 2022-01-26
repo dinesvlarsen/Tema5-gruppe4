@@ -34,16 +34,16 @@ export default {
 
 <style>
 .article-container__paragraph + .article-container__paragraph {
-	margin-top: var(--spacing-medium);
+	margin-top: var(--medium-spacing);
 }
 
 .article__author {
 	font-size: var(--body-font-size);
-	margin-top: var(--spacing-medium);
+	margin-top: var(--medium-spacing);
 }
 
 .article-container h1 {
-	margin-bottom: var(--spacing-medium);
+	margin-bottom: var(--medium-spacing);
 }
 
 .article-container img {
@@ -54,15 +54,15 @@ export default {
 .article-container figcaption {
 	margin-top: var(--margin);
 	margin-left: var(--margin);
-	margin-bottom: var(--spacing-medium);
+	margin-bottom: var(--medium-spacing);
 }
 
 /*Using grid solves the issue with centering the content in the container, but having the image fill the width of the screen. This sets up 12 columns that are 1fr wide each. article-heading ends at 10 since the Mutual Aid article shows that there should be equal whitespace on the right when the title overflows. Author gets the same value since they start at the same column, but this isn't discernible from the prototype.*/
 @media (min-width: 1280px) {
 	.article-container {
 		display: grid;
-  		grid-template-columns: repeat(12, 1fr);
-  		column-gap: 20px;
+		grid-template-columns: repeat(12, 1fr);
+		column-gap: 20px;
 	}
 
 	.article__heading {
@@ -80,9 +80,10 @@ export default {
 
 /* Adding the margin to the h1 and author separately caused an extra indent on the title. So I had to nest them together under one div and apply margin to that instead. */
 @media (max-width: 1280px) {
-	.article__heading, .article-container article {
-	margin-left: var(--margin);
-	margin-right: var(--margin);
-}
+	.article__heading,
+	.article-container article {
+		margin-left: var(--margin);
+		margin-right: var(--margin);
+	}
 }
 </style>
