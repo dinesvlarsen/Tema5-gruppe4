@@ -8,7 +8,7 @@
 					:src="`../../assets/images/${book.cover}`"
 					:alt="`Picture of the book ${book.title}`"
 				/>
-				<h3 class="book__title">{{ titleCase(book.title) }}</h3>
+				<h3 class="book__titles">{{ titleCase(book.title) }}</h3>
 				<p class="book__writers">by {{ upperCaseText(book.writers) }}</p>
 			</div>
 		</div>
@@ -52,12 +52,15 @@ export default {
 }
 
 .books__heading {
-	font-size: 1.85rem;
 	text-align: center;
 	margin-bottom: 2.5rem;
+	font-size: var(--body-font-size);
 }
 
 .library {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 10px;
 	margin: 0 1rem;
 }
 
@@ -70,17 +73,17 @@ export default {
 .book__cover {
 	margin-bottom: 0.625rem;
 }
-.book__title {
-	font-size: 1.25rem;
+.book__titles {
 	margin-bottom: 0.5rem;
 }
+
+.book__titles,
 .book__writers {
-	font-size: 1rem;
+	font-size: var(--caption-font-size);
 }
 
 @media screen and (min-width: 600px) {
 	.library {
-		display: grid;
 		max-width: 1920px;
 		grid-template-columns: repeat(3, 1fr);
 		gap: 10px;

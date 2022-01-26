@@ -13,6 +13,7 @@
     :slug="getArticleData(0, 'slug')"
   />
 
+
   <div class="divider">
     <MainArticles
       :title="getArticleData(1, 'title')"

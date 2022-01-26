@@ -1,5 +1,5 @@
 <template>
-	<Article :title="database.title" :author="database.author" :body="database.body" :image="database.image" :caption="database.caption" />
+	<Article :title="database.title" :author="database.author" :body="database.body" :image="database.image" :caption="database.caption" :alt="database.alt" />
 </template>
 
 <script>
@@ -18,6 +18,7 @@
 					body: data.articles[0].body,
 					image: data.articles[0].preview.image,
 					caption: data.articles[0].preview.caption,
+					alt: data.articles[0].preview.alt
 				}
 		};
 	},
