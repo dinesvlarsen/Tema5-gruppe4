@@ -13,7 +13,7 @@
 			/>
 		</div>
 		<div class="nav">
-			<a href="#home" class="active">in(dex)</a>
+			<a href="#" class="active">in(dex)</a>
 
 			<div id="myLinks">
 				<a href="#Announchements">Announchements</a>
