@@ -34,7 +34,8 @@ export default {
 			],
 			preview: {
 				image: 'article_1.jpeg',
-				caption: `Liz Craft, She is looking at me, 2015. Ceramic, aluminium, 84 x 82 x 12 cm.`
+				caption: `Liz Craft, She is looking at me, 2015. Ceramic, aluminium, 84 x 82 x 12 cm.`,
+				alt: `A photograph of an art installation, showing an announcer's desk with two microphones, against a backdrop showing the image of a city.`
 			},
 		},
 		{
@@ -50,7 +51,8 @@ export default {
 			],
 			preview: {
 				image: 'article_2.jpeg',
-				caption: ''
+				caption: 'Bullseye (1966)',
+				alt: `A woodblock print depicting a factory, with factory workers walking in front. `
 			}
 		},
 		{
@@ -66,7 +68,8 @@ export default {
 			],
 			preview: {
 				image: 'article_3.jpeg',
-				caption: `Cover of Obieg 12: “The Speed of Guccifer.” The studio of TV UNU in the Romanian city of Râmnicu Vâlcea (a.k.a. Hackerville). Photo: Nicoleta Moise.`
+				caption: `Cover of Obieg 12: “The Speed of Guccifer.” The studio of TV UNU in the Romanian city of Râmnicu Vâlcea (a.k.a. Hackerville). Photo: Nicoleta Moise.`,
+				alt: `A photo of a bedroom with floral wallpaper, showing a bed with an ornate backboard and sheets with a floral print. To the side there is a nightstand with a cord phone, and a lamp on the wall.`
 			},
 		},
 	],
@@ -75,33 +78,39 @@ export default {
 		{
 			title: 'Radicalizing Care',
 			writers: 'Birgit Bosold, Lena Fritsch, Vera Hofmann, Elke Krasny, Sophie Lingg',
-			cover: 'book_1.png'
+			cover: 'book_1.png',
+			alt: 'An all pink book cover, with a cut off photo to the right showing an indeterminate human body part.',
 		},
 		{
 			title: 'Curating the Complex & The Open Strike',
 			writers: 'TERRY SMITH',
-			cover: 'book_2.png'
+			cover: 'book_2.png',
+			alt: 'An all yellow book cover with black text.'
 		},
 		{
 			title: 'Amazonia',
 			writers: 'KATERYNA BOTANOVA, QUINN LATIMER',
-			cover: 'book_3.png'
+			cover: 'book_3.png',
+			alt: 'A book cover with a stylized image of a large fish, snake and two people, surrounded by smaller fish. '
 		},
 		{
 
 			title: 'Parapolitics',
 			writers: 'ANSELM FRANKE, NIDA GHOUSE, PAZ GUEVARA, ANTONIA MAJACA (EDS.)',
-			cover: 'book_4.png'
+			cover: 'book_4.png',
+			alt: 'An all grey book cover with stark red text.'
 		},
 		{
 			title: 'Visual Cultures as Time Travel',
 			writers: 'HENRIETTE GUNKEL, AYESHA HAMEED',
-			cover: 'book_5.png'
+			cover: 'book_5.png',
+			alt: 'A book cover with an illustration showing people and eagles laying down, with mountains rising up in the background.'
 		},
 		{
 			title: 'Dear Navigator',
 			writers: 'HU FANG',
-			cover: 'book_6.jpeg'
+			cover: 'book_6.jpeg',
+			alt: 'A book cover with a photo of a brown desert, surrounded by a black frame.'
 		},
 	],
 
@@ -110,19 +119,22 @@ export default {
 			title: 'And My Flames Stay Till You Get Out My Way',
 			artist: 'April Bey',
 			location: 'Museum für Moderne Kunst',
-			image: 'journal_1.jpeg'
+			image: 'journal_1.jpeg',
+			alt: 'Three paintings showing two blue figures with a cowboy-ish outfit in various poses, sat on a pink fence against a bright yellow background.'
 		},
 		{
 			title: 'Crip Time',
 			artist: 'Kenny Fries',
 			location: 'Vienna Art Week',
-			image: 'journal_2.jpeg'
+			image: 'journal_2.jpeg',
+			alt: 'Diorama of an art exhibition. Paintings are hung on string with clothespins, with a small side room filled with potted plants. '
 		},
 		{
 			title: 'Losing Control',
 			artist: 'Alte Pinakothek',
 			location: 'Novuyo Moyo',
-			image: 'journal_3.jpeg'
+			image: 'journal_3.jpeg',
+			alt: 'Photo of an art exhibition. In focus is a painting showing a pink figure, with a halo of hair dressing.'
 		},
 	],
 

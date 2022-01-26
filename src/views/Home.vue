@@ -14,7 +14,6 @@
 			:slug="getArticleData(1, 'slug')"
 		/>
 
-		<!-- This includes the lead and image in the link. Not sure if this should be split up or if RouterLink should be set up on component with a dynamic name (ie :slug from the database) -->
 		<MainArticles
 			:title="getArticleData(2, 'title')"
 			:lead="getArticleData(2, 'lead')"
