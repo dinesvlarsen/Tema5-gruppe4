@@ -1,7 +1,7 @@
 <template>
 <!-- If the value "promptOpen" is true, the newsletter element will be present in the DOM, as it is by default. 
 Clicking the X within the element changes the value to false, removing the element from the DOM and hiding it from view. -->
-	<div v-show="promptOpen" class="newsletterPrompt">
+	<div v-if="promptOpen" class="newsletterPrompt">
 		<div class="newsletterText">{{ message }}</div>
 			<div>
 				<button @click="promptOpen = false" aria-label="Close newsletter prompt"><img src="/assets/images/cross-icon.svg"/></button>
