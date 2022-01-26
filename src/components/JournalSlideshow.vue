@@ -121,7 +121,7 @@ export default {
 	display: flex;
 	top: 0;
 	left: 0;
-	z-index: 900;
+	z-index: 2;
 	width: 100%;
 	height: 100%;
 }
@@ -145,7 +145,7 @@ export default {
 	align-items: center;
 	justify-content: center;
 	text-align: center;
-	z-index: 100;
+	z-index: 1;
 	background: rgba(0, 0, 0, 0.199);
 }
 
@@ -163,7 +163,8 @@ export default {
 	position: absolute;
 	width: 100%;
 	bottom: 0;
-	z-index: 9000;
+	/* HIGHER z INDEX THAN THIS REBECCA!!!!!!!!!!!!!!!!!! */
+	z-index: 3;
 	text-align: center;
 	padding-top: 1rem;
 }

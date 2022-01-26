@@ -4,6 +4,7 @@
 		<!--Router link skal rundt h1 og p-->
 		<RouterLink :to="routerLink">
 			<h1 class="landingSite__header">{{ title }}</h1>
+			
 			<p class="landingSite__paragraph">
 				{{ lead }}
 			</p>
