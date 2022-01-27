@@ -138,14 +138,13 @@ export default {
 
 .slideshow__titles-container {
 	position: absolute;
+	z-index: 1;
 	height: 100%;
 	width: 100%;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	text-align: center;
-	z-index: 1;
 	background: rgba(0, 0, 0, 0.199);
 }
 
@@ -191,6 +190,7 @@ export default {
 	.slideshow {
 		margin: 0;
 	}
+	
 	.slideshow__titles {
 		font-size: 2rem;
 	}
