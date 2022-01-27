@@ -2,9 +2,9 @@
 	<section class="landingSite">
 		<p class="landingSite__latest">Latest</p>
 		<!--Router link skal rundt h1 og p-->
-		<RouterLink :to="routerLink">
+		<RouterLink :to="`/articles/${slug}`">
 			<h1 class="landingSite__header">{{ title }}</h1>
-			
+
 			<p class="landingSite__paragraph">
 				{{ lead }}
 			</p>

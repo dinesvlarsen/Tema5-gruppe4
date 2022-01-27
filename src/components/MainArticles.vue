@@ -1,6 +1,6 @@
 <template>
 	<section class="articles">
-		<RouterLink :to="routerLink">
+		<RouterLink :to="`/articles/${slug}`">
 			<h2 class="articles__header">{{ title }}</h2>
 
 			<p class="articles__paragraph">

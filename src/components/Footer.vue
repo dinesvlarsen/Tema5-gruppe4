@@ -12,7 +12,9 @@
 		</div>
 		<div class="footer__socials">
 			<ul>
-				<li>About us</li>
+				<RouterLink to="about-us">
+					<li>About us</li>
+				</RouterLink>
 				<br />
 				<li>Instagram ↗</li>
 				<li>Twitter ↗</li>
