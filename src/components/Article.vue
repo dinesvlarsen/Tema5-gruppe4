@@ -4,7 +4,7 @@
 			<div class="article__author">{{ author }}</div>
 			<h1>{{ title }}</h1>
 		</div>
-		<figure v-if="!error">
+		<figure>
 			<img :src="'../../assets/images/' + `${image}`" :alt="alt" />
 			<figcaption>{{ caption }}</figcaption>
 			<br /><br />

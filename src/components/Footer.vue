@@ -33,8 +33,8 @@ export default {};
 .footer {
 	display: flex;
 	font-style: normal;
-	margin-top: 7.5rem;
-	padding: 1.25rem;
+	margin-top: var(--large-spacing);
+	padding: var(--small-spacing);
 	font-size: var(--body-font-size);
 }
 

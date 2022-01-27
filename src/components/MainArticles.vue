@@ -29,24 +29,24 @@ export default {
 <style>
 .articles {
 	text-align: center;
-	margin: 0 1rem;
+	padding: 0 var(--small-spacing);
+	margin-top: var(--large-spacing);
 }
 
 .articles__header {
 	margin: 0 auto;
-	margin-top: 6.25rem;
 	max-width: 20ch;
 }
 
 .articles__paragraph {
 	margin: 0 auto;
-	margin-top: 1.25rem;
+	margin-top: var(--small-spacing);
 	max-width: 52ch;
 	font-size: var(--caption-font-size);
 }
 
 .articles__image {
-	margin-top: 2.5rem;
+	margin-top: var(--medium-spacing);
 }
 
 @media screen and (min-width: 968px) {

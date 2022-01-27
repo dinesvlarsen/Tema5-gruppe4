@@ -34,6 +34,7 @@ export default {
 	display: flex;
 	flex-direction: column;
 	text-align: center;
+	padding: 0 var(--small-spacing);
 }
 
 .landingSite__latest {
@@ -41,18 +42,17 @@ export default {
 }
 
 .landingSite__header {
-	margin: 0.5em auto;
+	margin: var(--medium-spacing) auto var(--small-spacing) auto;
 	max-width: 27ch;
 }
 
 .landingSite__paragraph {
-	margin: 0.5em 1em 0.5em;
 	font-size: var(--caption-font-size);
 }
 
 .landingSite__image {
-	width: 96%;
-	margin: 0.5em auto;
+	margin: 0 auto;
+	margin-top: var(--medium-spacing);
 }
 
 @media screen and (min-width: 968px) {
@@ -62,7 +62,7 @@ export default {
 
 	.landingSite__paragraph {
 		max-width: 60ch;
-		margin: 0.5em auto;
+		margin: 0 auto;
 	}
 }
 </style>

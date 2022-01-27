@@ -3,7 +3,7 @@
 		<h1>Wooooops!</h1>
 		<p>Looks like this page doesn't exist</p>
 		<router-link class="notfound__button" to="/">
-			<button>Click here and we'll bring you back to home!</button>
+			<button>Click here and we'll guide you back to home!</button>
 		</router-link>
 	</div>
 </template>
