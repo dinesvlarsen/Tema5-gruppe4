@@ -23,13 +23,13 @@ export default {
   background: var(--highlight-color);
   width: 100%;
   height: 62px;
-  padding-top: 11px;
+  padding: 11px;
   overflow: hidden;
 }
 
 .news-banner__announcement {
   white-space: nowrap;
-  animation: animatedNewsBanner 25s linear infinite;
+  animation: animatedNewsBanner 40s linear infinite;
 }
 
 @keyframes animatedNewsBanner {
@@ -43,6 +43,9 @@ export default {
 }
 
 @media screen and (min-width: 968px) {
+  .news-banner__announcement {
+    animation: animatedNewsBanner 50s linear infinite;
+  }
   @keyframes animatedNewsBanner {
     0% {
       transform: translateX(100%);
@@ -51,6 +54,13 @@ export default {
     100% {
       transform: translateX(-130%);
     }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .news-banner {
+    height: 42px;
+    padding-top: 11px;
   }
 }
 </style>
