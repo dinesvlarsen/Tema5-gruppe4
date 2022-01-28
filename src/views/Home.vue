@@ -1,4 +1,5 @@
 <template>
+	<Newsletter/>
 	<LandingSite
 		:title="getArticleData(0, 'title')"
 		:lead="getArticleData(0, 'lead')"
@@ -14,7 +15,6 @@
 			:slug="getArticleData(1, 'slug')"
 		/>
 
-		<!-- This includes the lead and image in the link. Not sure if this should be split up or if RouterLink should be set up on component with a dynamic name (ie :slug from the database) -->
 		<MainArticles
 			:title="getArticleData(2, 'title')"
 			:lead="getArticleData(2, 'lead')"
@@ -22,7 +22,7 @@
 			:slug="getArticleData(2, 'slug')"
 		/>
 	</div>
-
+	
 	<Books />
 
 	<JournalSlideshow />
@@ -34,6 +34,7 @@ import LandingSite from '../components/LandingSite.vue';
 import MainArticles from '../components/MainArticles.vue';
 import Books from '../components/Books.vue';
 import JournalSlideshow from '../components/JournalSlideshow.vue';
+import Newsletter from '../components/Newsletter.vue';
 
 export default {
 	data() {
@@ -63,6 +64,7 @@ export default {
 		MainArticles,
 		Books,
 		JournalSlideshow,
+		Newsletter,
 	},
 };
 </script>

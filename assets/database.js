@@ -15,6 +15,10 @@ export default {
 		address: `172 Classon Avenue. Brooklyn, NY 11205. USA`,
 	},
 
+	newsletter: {
+		text: `Subscribe to the in(dex) newsletter for monthly updates`
+	},
+
 	announcement: {
 		message: `OUT NOW! Issue #123 “Dialogues on Recursive Colonialisms, Speculative Computation, and the Techno-social”`
 	},
