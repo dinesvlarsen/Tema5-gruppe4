@@ -38,6 +38,7 @@ import MainArticles from '../components/MainArticles.vue';
 import Books from '../components/Books.vue';
 import JournalSlideshow from '../components/JournalSlideshow.vue';
 import Newsletter from '../components/Newsletter.vue';
+import AboutUs from './AboutUs.vue';
 
 export default {
 	data() {
@@ -68,6 +69,7 @@ export default {
 		Books,
 		JournalSlideshow,
 		Newsletter,
+		AboutUs,
 	},
 };
 </script>
