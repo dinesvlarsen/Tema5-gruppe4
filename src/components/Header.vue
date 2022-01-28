@@ -1,37 +1,63 @@
 <template>
 	<header class="header">
-		<div class="hamburger__icon">
+		<div @click="toggle" class="hamburger__icon">
 			<img
 				src="../../assets/images/header-icons/Hamburger icon.svg"
 				alt="header"
 			/>
 		</div>
+
 		<div class="search__icon">
 			<img
 				src="../../assets/images/header-icons/Search icon.svg"
 				alt="header"
 			/>
 		</div>
-		<div class="nav">
-			<a href="#" class="active">in(dex)</a>
 
-			<div id="myLinks">
-				<a href="#Announchements">Announchements</a>
-				<a href="#Journal">Journal</a>
-				<a href="#Architecture">Architecture</a>
-				<a href="#Video & Film">Video & Film</a>
-				<a href="#Live">Live</a>
-				<a href="#Notes">Notes</a>
-				<a href="#Books">Books</a>
-				<a href="#Projects">Projects</a>
-				<a href="#Podcasts">Podcasts</a>
+		<div class="nav" ref="collapsibleNav">
+			<a href="#" class="index__logo">in(dex)</a>
+
+			<div class="nav__collapsible">
+				<div class="nav__links" :class="toggleNav ? 'hidden' : ''">
+					<a href="#Announcements">Announcements</a>
+					<a href="#Journal">Journal</a>
+					<a href="#Architecture">Architecture</a>
+					<a href="#Video & Film">Video & Film</a>
+					<a href="#Live">Live</a>
+					<a href="#Notes">Notes</a>
+					<a href="#Books">Books</a>
+					<a href="#Projects">Projects</a>
+					<a href="#Podcasts">Podcasts</a>
+				</div>
+
+				<ul class="nav__socials" :class="toggleNav ? 'hidden' : ''">
+					<li>About us</li>
+					<br />
+					<li>Instagram ↗</li>
+					<li>Twitter ↗</li>
+					<br />
+					<li>in@dex.info</li>
+				</ul>
 			</div>
-			<a href="javascript:void(0);" class="icon" onclick="myFunction()">
-				<i class="fa fa-bars"></i>
-			</a>
 		</div>
 	</header>
 </template>
+
+<script>
+export default {
+	data() {
+		return {
+			toggleNav: false,
+		};
+	},
+	methods: {
+		toggle() {
+			this.toggleNav = !this.toggleNav;
+			console.log(this.toggleNav);
+		},
+	},
+};
+</script>
 
 <style>
 .header {
@@ -41,48 +67,72 @@
 	left: 0;
 }
 
-.active {
-	font-size: 30px;
+.nav__collapsible {
+	display: grid;
+	grid-template-columns: repeat(12, 1fr);
+	gap: 12px;
+	font-size: var(--body-font-size);
+	background: var(--secondary-color);
 }
 
+.nav__links {
+	display: flex;
+	flex-direction: column;
+	grid-column-start: 7;
+}
+
+.nav__socials {
+	grid-column-start: 9;
+}
 .hamburger__icon {
-	width: 40px;
+	position: fixed;
 	float: right;
-	padding: 2px;
 	margin: 20px;
+	cursor: pointer;
+	z-index: 99999;
+	right: -1px;
 }
 
 .search__icon {
-	width: 35px;
+	position: fixed;
 	float: right;
 	padding: 3px;
 	margin: 15px;
+	right: 60px;
+	cursor: pointer;
+	z-index: 99999;
 }
 
-.nav {
-	overflow: hidden;
-	position: relative;
+.index__logo {
+	font-size: 30px;
+	position: fixed;
+	margin-top: 10px;
+	z-index: 99999;
+	padding-left: 15px;
 }
 
-.nav #myLinks {
+.slide__nav {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+/* .slide__nav a {
+	display: block;
+	width: 100%;
+	max-width: 300px;
+	margin: 0 auto;
+} */
+
+.slide__nav ul {
+	width: 100%;
+	max-width: 300px;
+	position: absolute;
+	top: 5px;
+	right: 240px;
+}
+
+.hidden {
 	display: none;
 }
-
-.nav a {
-	color: black;
-	padding: 14px 16px;
-	text-decoration: none;
-	display: block;
-}
 </style>
-
-<script>
-function myFunction() {
-	var x = document.getElementById('myLinks');
-	if (x.style.display === 'block') {
-		x.style.display = 'none';
-	} else {
-		x.style.display = 'block';
-	}
-}
-</script>
