@@ -7,7 +7,7 @@
 </template>
 
 <script>
-import data from "./../../assets/database.js";
+import data from "/assets/database.js";
 
 export default {
   data() {
@@ -46,6 +46,7 @@ export default {
   .news-banner__announcement {
     animation: animatedNewsBanner 50s linear infinite;
   }
+  
   @keyframes animatedNewsBanner {
     0% {
       transform: translateX(100%);

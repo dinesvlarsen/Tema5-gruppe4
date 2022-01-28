@@ -1,19 +1,14 @@
 <template>
 	<section class="about-us">
 		<h2 class="about-us__title">{{ database.title }}</h2>
-
-		<p
-			class="about-us__body"
-			v-for="paragraph in database.body"
-			:key="paragraph"
-		>
+		<p class="about-us__body" v-for="paragraph in database.body" :key="paragraph">
 			{{ paragraph }}
 		</p>
 	</section>
 </template>
 
 <script>
-import data from '../../assets/database.js';
+import data from '/assets/database.js';
 
 export default {
 	data() {
@@ -45,13 +40,11 @@ export default {
 
 @media screen and (min-width: 968px) {
 	.about-us__title {
-		/*max-width: 70%;*/
 		max-width: 36ch;
 	}
 
 	.about-us__body {
 		max-width: 70ch;
-		/* max-width: 70%; */
 		margin: 0 auto;
 	}
 }

@@ -10,17 +10,19 @@ import Header from '../components/Header.vue';
 import NewsBanner from '../components/NewsBanner.vue';
 import Footer from '../components/Footer.vue';
 
-import databaseData from '../../assets/database.js';
+import databaseData from '/assets/database.js';
+
 export default {
 	data() {
 		return {
 			data: databaseData,
 		};
 	},
+
 	components: {
-		Footer,
 		Header,
 		NewsBanner,
+		Footer,
 	},
 
 	provide() {

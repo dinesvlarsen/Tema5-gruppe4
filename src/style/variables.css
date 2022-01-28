@@ -13,6 +13,10 @@
 	--small-spacing: 1.25rem;
 	--medium-spacing: 2.5rem;
 	--large-spacing: 6.25rem;
+
+	--grid-small-spacing: 10px;
+	--grid-medium-spacing: 20px;
+	
 	--margin: 0.5rem;
 	--padding: 0.5rem;
 }
