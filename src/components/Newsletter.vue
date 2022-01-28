@@ -3,7 +3,10 @@
 Clicking the X within the element changes the value to false, removing the element from the DOM and hiding it from view. -->
 		<div v-if="promptOpen" class="newsLetterPrompt">
 				<div class="newsletter__text">
-					<button @click="showInput = true"><div v-show="showInput === false">{{ message }}</div></button>
+					<button @click="showInput = true">
+						<div v-show="showInput === false">{{ message }}</div>
+					</button>
+
 					<div class="subscribeInput" v-if="showInput === true">
 						<form>
 							<label for="email">Enter your e-mail:</label>
@@ -12,6 +15,7 @@ Clicking the X within the element changes the value to false, removing the eleme
 						</form>
 					</div>
 				</div>
+
 				<div>
 					<button @click="promptOpen = false" aria-label="Close newsletter prompt"><img src="/assets/images/cross-icon.svg"/></button>
 				</div>
@@ -19,7 +23,7 @@ Clicking the X within the element changes the value to false, removing the eleme
 </template>
 
 <script>
-import data from "../../assets/database.js";
+import data from "/assets/database.js";
 
 export default {
 	data() {
@@ -34,11 +38,7 @@ export default {
 
 	methods: {
 		subscribeResponse() {
-			event.preventDefault();
-			// alert(`E-mail registered: ${readerEmail}
-			
-			// Thank you, newsletters are coming soon!`)
-			alert('Thank you, newsletters are coming soon!');
+			alert(`E-mail recorded: ${this.readerEmail} \n\nThank you, newsletters are coming soon! `);
 		},
 	},
 }
@@ -75,10 +75,6 @@ export default {
 	width: 623px;
 }
 
-/* .newsletterPrompt:not(.subscribeInput):hover {
-	background-color: blue;
-} */
-
 .newsletterPrompt:hover {
 	background-color: var(--highlight-color);
 }
@@ -87,12 +83,6 @@ export default {
 	flex: 1;
 	font-size: var(--body-font-size);
 }
-
-/* .subscribeInput {
-	z-index: 10;
-	background-color: var(--secondary-color);
-	width: 1700px;
-} */
 
 .subscribeInput button {
 	background-color: var(--highlight-color);

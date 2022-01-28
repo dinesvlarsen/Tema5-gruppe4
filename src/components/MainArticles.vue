@@ -1,12 +1,12 @@
 <template>
 	<section class="articles">
 		<RouterLink :to="`/articles/${slug}`">
-			<h2 class="articles__header">{{ title }}</h2>
+			<h2 class="articles__heading">{{ title }}</h2>
 			<p class="articles__paragraph">
 				{{ lead }}
 			</p>
 		</RouterLink>
-		<img class="articles__image" :src="imageLink" />
+		<img class="articles__image" :src="imageLink" :alt="alt" />
 	</section>
 </template>
 
@@ -16,7 +16,7 @@ export default {
 
 	computed: {
 		imageLink() {
-			return '../../assets/images/' + this.image;
+			return '/assets/images/' + this.image;
 		},
 		routerLink() {
 			return `/${this.slug}`;
@@ -32,7 +32,7 @@ export default {
 	margin-top: var(--large-spacing);
 }
 
-.articles__header {
+.articles__heading {
 	margin: 0 auto;
 	max-width: 20ch;
 }

@@ -4,24 +4,20 @@
 			<div class="article__author">{{ author }}</div>
 			<h1>{{ title }}</h1>
 		</div>
+
 		<figure>
-			<img :src="'../../assets/images/' + `${image}`" :alt="alt" />
+			<img :src="'/assets/images/' + `${image}`" :alt="alt" />
 			<figcaption>{{ caption }}</figcaption>
-			<br /><br />
 		</figure>
+
 		<article>
-			<p
-				class="article-container__paragraph"
-				v-for="paragraph in body"
-				:key="paragraph"
-			>
+			<p class="article-container__paragraph" v-for="paragraph in body" :key="paragraph">
 				{{ paragraph }}
 			</p>
 		</article>
-
-		<!-- <div>{{ body }}</div> -->
 	</div>
-	<not-found v-else />
+
+	<NotFound v-else />
 </template>
 
 <script>
@@ -54,16 +50,19 @@ export default {
 				(article) => article.slug === articleId
 			);
 
+			//Checks if the article found is valid, and if it is sets all the data matching said article.
 			if (article) {
 				this.title = article.title;
 				this.author = article.author;
 				this.slug = article.slug;
 				this.lead = article.lead;
 				this.body = article.body;
+
 				this.image = article.preview.image;
 				this.caption = article.preview.caption;
 				this.alt = article.preview.alt;
 			} else {
+				//If articleId is not true, uses this prop to display NotFound component instead of article data.
 				this.error = true;
 			}
 		},
@@ -97,7 +96,7 @@ export default {
 .article-container figcaption {
 	margin-top: var(--margin);
 	margin-left: var(--margin);
-	margin-bottom: var(--medium-spacing);
+	margin-bottom: var(--large-spacing);
 }
 
 /*Using grid solves the issue with centering the content in the container, but having the image fill the width of the screen. This sets up 12 columns that are 1fr wide each. article-heading ends at 10 since the Mutual Aid article shows that there should be equal whitespace on the right when the title overflows. Author gets the same value since they start at the same column, but this isn't discernible from the prototype.*/
@@ -105,7 +104,7 @@ export default {
 	.article-container {
 		display: grid;
 		grid-template-columns: repeat(12, 1fr);
-		column-gap: 20px;
+		column-gap: var(--grid-medium-spacing);
 	}
 
 	.article__heading {

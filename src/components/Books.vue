@@ -1,12 +1,13 @@
 <template>
 	<section class="books">
 		<h2 class="books__heading">Books</h2>
-		<div class="library">
-			<div class="book" v-for="(book, index) in booksList" :key="book.title">
-				<img
-					class="book__cover"
-					:src="`../../assets/images/${book.cover}`"
-					:alt="`Picture of the book ${book.title}`"
+
+		<div class="book-item">
+			<div class="book" v-for="(book) in booksList" :key="book.title">
+				<img 
+					class="book__cover" 
+					:src="`/assets/images/${book.cover}`" 
+					:alt="book.alt" 
 				/>
 				<h3 class="book__titles">{{ upperCaseText(book.writers) }}</h3>
 				<p class="book__writers">{{ titleCase(book.title) }}</p>
@@ -16,7 +17,7 @@
 </template>
 
 <script>
-import Data from './../../assets/database.js';
+import Data from '/assets/database.js';
 
 export default {
 	data() {
@@ -53,21 +54,20 @@ export default {
 }
 
 .books__heading {
-	text-align: center;
 	font-size: var(--body-font-size);
+	text-align: center;
 }
 
-.library {
+.book-item {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
-	gap: 10px;
 	margin-top: var(--medium-spacing);
+	gap: var(--grid-small-spacing);
 }
 
 .book {
-	max-width: 306px;
 	justify-content: center;
-	margin-bottom: 2.5rem;
+	max-width: 306px;
 }
 
 .book__cover {
@@ -80,14 +80,15 @@ export default {
 }
 
 @media screen and (min-width: 600px) {
-	.library {
-		max-width: 1920px;
-		grid-template-columns: repeat(3, 1fr);
+	.book-item {
+		/* Change view on tablet to be 3 books on each line */
+		grid-template-columns: repeat(3, 1fr); 
 	}
 }
 
 @media screen and (min-width: 1175px) {
-	.library {
+	.book-item {
+		/* Change books to be 1 book on each view */
 		grid-template-columns: repeat(6, 1fr);
 	}
 }

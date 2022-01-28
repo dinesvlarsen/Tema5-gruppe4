@@ -32,7 +32,7 @@
 </template>
 
 <script>
-import prototypeData from '../../assets/database.js';
+import prototypeData from '/assets/database.js';
 import LandingSite from '../components/LandingSite.vue';
 import MainArticles from '../components/MainArticles.vue';
 import Books from '../components/Books.vue';
@@ -57,6 +57,8 @@ export default {
 				return this.data.articles[index].preview.image;
 			} else if (key === 'caption') {
 				return this.data.articles[index].preview.caption;
+			} else if (key === 'alt') {
+				return this.data.articles[index].preview.alt;
 			}
 
 			return this.data.articles[index][key];

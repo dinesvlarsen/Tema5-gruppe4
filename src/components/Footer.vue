@@ -1,18 +1,17 @@
 <template>
 	<footer class="footer">
-		<h4 class="footer__logo">in(dex)</h4>
-
+		<div class="footer__logo">in(dex)</div>
 		<div class="footer__address">
-			<!-- You can get this information from database.js in assets. Look in the database.js file on line 15 -->
 			<ul>
 				<li>172 Classon Avenue</li>
 				<li>Brooklyn, NY 11205</li>
 				<li>USA</li>
 			</ul>
 		</div>
+
 		<div class="footer__socials">
 			<ul>
-				<RouterLink to="about-us">
+				<RouterLink to="/about-us">
 					<li>About us</li>
 				</RouterLink>
 				<br />
@@ -25,15 +24,15 @@
 	</footer>
 </template>
 
-<script>
-export default {};
-</script>
+ <script>
+ 	export default {};
+ </script>
 
 <style>
 .footer {
 	display: flex;
 	font-style: normal;
-	margin-top: var(--large-spacing);
+	margin: var(--large-spacing);
 	padding: var(--small-spacing);
 	font-size: var(--body-font-size);
 }
