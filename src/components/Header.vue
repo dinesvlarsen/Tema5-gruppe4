@@ -13,15 +13,13 @@
 				alt="header"
 			/>
 		</div>
-		<div class="nav">
+
+		<div class="nav" ref="collapsibleNav">
 			<RouterLink :to="'/'">
 				<div class="nav__logo">
 					<a href="#" class="active">in(dex)</a>
 				</div>
 			</RouterLink>
-
-		<div class="nav" ref="collapsibleNav">
-			<a href="#" class="index__logo">in(dex)</a>
 
 			<div class="nav__collapsible">
 				<div class="nav__links" :class="toggleNav ? 'hidden' : ''">
