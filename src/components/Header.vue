@@ -149,13 +149,4 @@ export default {
 .hidden {
 	display: none;
 }
-<<<<<<< HEAD
-=======
-
-.nav a {
-	color: black;
-	text-decoration: none;
-	display: block;
-}
->>>>>>> deafc3d009ae3cdffaec6e8a8e3e1f181f828d23
 </style>
