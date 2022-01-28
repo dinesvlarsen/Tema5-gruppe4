@@ -9,7 +9,6 @@ const data = Data;
 
 
 export default [
-
 	{ name: 'home', path: '/', component: Home },
 	{ name: 'about-us', path: `/${data.pages[0].slug}`, component: AboutUs },
 	{ name: 'article', path: '/articles/:articleId', component: Articles, props: true },

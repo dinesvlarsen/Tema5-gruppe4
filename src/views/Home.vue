@@ -1,10 +1,11 @@
 <template>
-	<Newsletter/>
+	<Newsletter />
 	<LandingSite
 		:title="getArticleData(0, 'title')"
 		:lead="getArticleData(0, 'lead')"
 		:image="getArticleData(0, 'image')"
 		:slug="getArticleData(0, 'slug')"
+		:alt="getArticleData(0, 'alt')"
 	/>
 
 	<div class="divider">
@@ -13,17 +14,18 @@
 			:lead="getArticleData(1, 'lead')"
 			:image="getArticleData(1, 'image')"
 			:slug="getArticleData(1, 'slug')"
+			:alt="getArticleData(1, 'alt')"
 		/>
-
 
 		<MainArticles
 			:title="getArticleData(2, 'title')"
 			:lead="getArticleData(2, 'lead')"
 			:image="getArticleData(2, 'image')"
 			:slug="getArticleData(2, 'slug')"
+			:alt="getArticleData(2, 'alt')"
 		/>
 	</div>
-	
+
 	<Books />
 
 	<JournalSlideshow />
