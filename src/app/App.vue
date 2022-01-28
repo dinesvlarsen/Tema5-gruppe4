@@ -1,11 +1,14 @@
 <template>
+
 	<Header />
+    <NewsBanner />
 	<RouterView />
 	<Footer />
 </template>
 
 <script>
 import Header from '../components/Header.vue';
+import NewsBanner from "../components/NewsBanner.vue";
 import Footer from '../components/Footer.vue';
 
 import databaseData from '../../assets/database.js';
@@ -18,6 +21,7 @@ export default {
 	components: {
 		Footer,
 		Header,
+     NewsBanner,
 	},
 
 	provide() {
@@ -29,6 +33,7 @@ export default {
 </script>
 
 <style>
+
 @import '../style/fonts.css';
 @import '../style/reset.css';
 @import '../style/variables.css';

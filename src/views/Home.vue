@@ -15,6 +15,7 @@
 			:slug="getArticleData(1, 'slug')"
 		/>
 
+
 		<MainArticles
 			:title="getArticleData(2, 'title')"
 			:lead="getArticleData(2, 'lead')"
