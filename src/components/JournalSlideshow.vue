@@ -100,14 +100,13 @@ export default {
 }
 
 .journal {
-	margin: 0 auto;
+	margin: var(--large-spacing) auto 0 auto;
 	max-width: 1920px;
 }
 
 .journal__header {
 	text-align: center;
-	margin-bottom: 2.5rem;
-	margin-top: 6.25rem;
+	margin-bottom: var(--medium-spacing);
 	font-size: var(--body-font-size);
 }
 
@@ -152,6 +151,7 @@ export default {
 	font-size: 1rem;
 	color: white;
 	opacity: 100%;
+	text-align: center;
 }
 
 .slideshow__images {
@@ -190,7 +190,7 @@ export default {
 	.slideshow {
 		margin: 0;
 	}
-	
+
 	.slideshow__titles {
 		font-size: 2rem;
 	}
@@ -198,7 +198,7 @@ export default {
 
 @media screen and (min-width: 928px) {
 	.slideshow {
-		margin: 0 1rem;
+		margin: 0 var(--small-spacing);
 	}
 
 	.slideshow__titles-container--hide {

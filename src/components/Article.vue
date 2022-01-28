@@ -1,5 +1,5 @@
 <template>
-	<div class="article-container">
+	<div v-if="!error" class="article-container">
 		<div class="article__heading">
 			<div class="article__author">{{ author }}</div>
 			<h1>{{ title }}</h1>
@@ -18,16 +18,59 @@
 				{{ paragraph }}
 			</p>
 		</article>
+
 		<!-- <div>{{ body }}</div> -->
 	</div>
+	<not-found v-else />
 </template>
 
 <script>
+import NotFound from './NotFound.vue';
+
 export default {
-	props: ['title', 'author', 'body', 'image', 'caption', 'alt'],
+	inject: ['articleData'],
+	props: ['articleId'],
+	components: { NotFound },
 
 	data() {
-		return {};
+		return {
+			title: '',
+			author: '',
+			slug: '',
+			lead: '',
+			body: '',
+
+			image: '',
+			caption: '',
+			alt: '',
+
+			error: false,
+		};
+	},
+
+	methods: {
+		loadArticle(articleId) {
+			const article = this.articleData.find(
+				(article) => article.slug === articleId
+			);
+
+			if (article) {
+				this.title = article.title;
+				this.author = article.author;
+				this.slug = article.slug;
+				this.lead = article.lead;
+				this.body = article.body;
+				this.image = article.preview.image;
+				this.caption = article.preview.caption;
+				this.alt = article.preview.alt;
+			} else {
+				this.error = true;
+			}
+		},
+	},
+
+	created() {
+		this.loadArticle(this.articleId);
 	},
 };
 </script>
