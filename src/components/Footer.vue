@@ -12,7 +12,9 @@
 		</div>
 		<div class="footer__socials">
 			<ul>
-				<li>About us</li>
+				<RouterLink to="about-us">
+					<li>About us</li>
+				</RouterLink>
 				<br />
 				<li>Instagram ↗</li>
 				<li>Twitter ↗</li>
@@ -31,8 +33,8 @@ export default {};
 .footer {
 	display: flex;
 	font-style: normal;
-	margin-top: 7.5rem;
-	padding: 1.25rem;
+	margin-top: var(--large-spacing);
+	padding: var(--small-spacing);
 	font-size: var(--body-font-size);
 }
 

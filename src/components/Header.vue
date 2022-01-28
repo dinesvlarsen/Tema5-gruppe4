@@ -6,6 +6,7 @@
 				alt="header"
 			/>
 		</div>
+
 		<div class="search__icon">
 			<img
 				src="../../assets/images/header-icons/Search icon.svg"
@@ -13,7 +14,11 @@
 			/>
 		</div>
 		<div class="nav">
-			<a href="#" class="active">in(dex)</a>
+			<RouterLink :to="'/'">
+				<div class="nav__logo">
+					<a href="#" class="active">in(dex)</a>
+				</div>
+			</RouterLink>
 
 			<div id="myLinks">
 				<a href="#Announchements">Announchements</a>
@@ -34,6 +39,14 @@
 </template>
 
 <style>
+.nav {
+	display: flex;
+	justify-content: space-between;
+}
+.nav__logo {
+	padding: 14px 16px;
+}
+
 .header {
 	position: sticky;
 	z-index: 9;
@@ -70,7 +83,6 @@
 
 .nav a {
 	color: black;
-	padding: 14px 16px;
 	text-decoration: none;
 	display: block;
 }

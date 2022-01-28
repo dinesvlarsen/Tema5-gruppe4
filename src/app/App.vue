@@ -7,10 +7,23 @@
 <script>
 import Header from '../components/Header.vue';
 import Footer from '../components/Footer.vue';
+
+import databaseData from '../../assets/database.js';
 export default {
+	data() {
+		return {
+			data: databaseData,
+		};
+	},
 	components: {
 		Footer,
 		Header,
+	},
+
+	provide() {
+		return {
+			articleData: this.data.articles,
+		};
 	},
 };
 </script>
