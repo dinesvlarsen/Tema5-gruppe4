@@ -13,6 +13,15 @@
 				alt="header"
 			/>
 		</div>
+<<<<<<< HEAD
+=======
+		<div class="nav">
+			<RouterLink :to="'/'">
+				<div class="nav__logo">
+					<a href="#" class="active">in(dex)</a>
+				</div>
+			</RouterLink>
+>>>>>>> deafc3d009ae3cdffaec6e8a8e3e1f181f828d23
 
 		<div class="nav" ref="collapsibleNav">
 			<a href="#" class="index__logo">in(dex)</a>
@@ -60,6 +69,14 @@ export default {
 </script>
 
 <style>
+.nav {
+	display: flex;
+	justify-content: space-between;
+}
+.nav__logo {
+	padding: 14px 16px;
+}
+
 .header {
 	position: sticky;
 	z-index: 9;
