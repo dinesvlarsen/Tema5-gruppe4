@@ -2,7 +2,6 @@
 	<section class="articles">
 		<RouterLink :to="`/articles/${slug}`">
 			<h2 class="articles__header">{{ title }}</h2>
-
 			<p class="articles__paragraph">
 				{{ lead }}
 			</p>
@@ -13,7 +12,7 @@
 
 <script>
 export default {
-	props: ['title', 'lead', 'image', 'slug'],
+	props: ['title', 'lead', 'image', 'slug', 'alt'],
 
 	computed: {
 		imageLink() {

@@ -7,20 +7,20 @@
 			/>
 		</div>
 
-		<div class="search__icon">
+		<!-- <div class="search__icon">
 			<img
 				src="../../assets/images/header-icons/Search icon.svg"
 				alt="header"
 			/>
-		</div>
+		</div> -->
+
+		<RouterLink :to="'/'">
+			<div class="nav__logo">
+				<a href="#" class="active">in(dex)</a>
+			</div>
+		</RouterLink>
 
 		<div class="nav" ref="collapsibleNav">
-			<RouterLink :to="'/'">
-				<div class="nav__logo">
-					<a href="#" class="active">in(dex)</a>
-				</div>
-			</RouterLink>
-
 			<div class="nav__collapsible">
 				<div class="nav__links" :class="toggleNav ? 'hidden' : ''">
 					<a href="#Announcements">Announcements</a>
@@ -51,39 +51,43 @@
 export default {
 	data() {
 		return {
-			toggleNav: false,
+			toggleNav: true,
 		};
 	},
 	methods: {
 		toggle() {
 			this.toggleNav = !this.toggleNav;
-			console.log(this.toggleNav);
 		},
 	},
 };
 </script>
 
 <style>
-.nav {
-	display: flex;
-	justify-content: space-between;
-}
-.nav__logo {
-	padding: 14px 16px;
-}
-
 .header {
 	position: sticky;
 	z-index: 9;
 	top: 0;
 	left: 0;
+	font-size: 30px;
+}
+
+.nav {
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: flex;
+	justify-content: space-between;
+}
+.nav__logo {
+	position: relative;
+	z-index: 999;
+	padding: 14px var(--small-spacing);
 }
 
 .nav__collapsible {
 	display: grid;
 	grid-template-columns: repeat(12, 1fr);
 	gap: 12px;
-	font-size: var(--body-font-size);
 	background: var(--secondary-color);
 }
 
@@ -137,14 +141,25 @@ export default {
 } */
 
 .slide__nav ul {
-	width: 100%;
-	max-width: 300px;
-	position: absolute;
-	top: 5px;
-	right: 240px;
+	max-width: 100%;
 }
 
 .hidden {
 	display: none;
+}
+
+@media screen and (max-width: 968px) {
+	.nav-collapsible {
+		display: block;
+		grid-template-columns: repeat(1, 1fr);
+	}
+	.nav__links {
+		font-size: var(--heading-font-size);
+		padding: var(--medium-spacing) 0;
+		text-align: center;
+	}
+	.nav__socials {
+		display: none;
+	}
 }
 </style>

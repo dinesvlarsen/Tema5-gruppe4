@@ -15,7 +15,7 @@
 
 <script>
 export default {
-	props: ['title', 'lead', 'image', 'slug'],
+	props: ['title', 'lead', 'image', 'slug', 'alt'],
 
 	computed: {
 		imageLink() {
