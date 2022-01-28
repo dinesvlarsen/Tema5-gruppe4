@@ -100,14 +100,13 @@ export default {
 }
 
 .journal {
-	margin: 0 auto;
+	margin: var(--large-spacing) auto 0 auto;
 	max-width: 1920px;
 }
 
 .journal__header {
 	text-align: center;
-	margin-bottom: 2.5rem;
-	margin-top: 6.25rem;
+	margin-bottom: var(--medium-spacing);
 	font-size: var(--body-font-size);
 }
 
@@ -121,7 +120,7 @@ export default {
 	display: flex;
 	top: 0;
 	left: 0;
-	z-index: 900;
+	z-index: 2;
 	width: 100%;
 	height: 100%;
 }
@@ -138,14 +137,13 @@ export default {
 
 .slideshow__titles-container {
 	position: absolute;
+	z-index: 1;
 	height: 100%;
 	width: 100%;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	text-align: center;
-	z-index: 100;
 	background: rgba(0, 0, 0, 0.199);
 }
 
@@ -153,6 +151,7 @@ export default {
 	font-size: 1rem;
 	color: white;
 	opacity: 100%;
+	text-align: center;
 }
 
 .slideshow__images {
@@ -163,7 +162,8 @@ export default {
 	position: absolute;
 	width: 100%;
 	bottom: 0;
-	z-index: 9000;
+	/* HIGHER z INDEX THAN THIS REBECCA!!!!!!!!!!!!!!!!!! */
+	z-index: 3;
 	text-align: center;
 	padding-top: 1rem;
 }
@@ -190,6 +190,7 @@ export default {
 	.slideshow {
 		margin: 0;
 	}
+
 	.slideshow__titles {
 		font-size: 2rem;
 	}
@@ -197,7 +198,7 @@ export default {
 
 @media screen and (min-width: 928px) {
 	.slideshow {
-		margin: 0 1rem;
+		margin: 0 var(--small-spacing);
 	}
 
 	.slideshow__titles-container--hide {

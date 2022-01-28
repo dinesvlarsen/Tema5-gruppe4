@@ -13,12 +13,14 @@
 	--small-spacing: 1.25rem;
 	--medium-spacing: 2.5rem;
 	--large-spacing: 6.25rem;
-	--margin: 0.5em;
-	--padding: 0.5em;
+	--margin: 0.5rem;
+	--padding: 0.5rem;
 }
 
 @media screen and (max-width: 500px) {
 	:root {
-		--heading-font-size: 2rem;
+		--heading-font-size: 32px;
+		--body-font-size: 16px;
+		--caption-font-size: 12px;
 	}
 }
