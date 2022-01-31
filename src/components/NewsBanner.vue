@@ -46,7 +46,7 @@ export default {
   .news-banner__announcement {
     animation: animatedNewsBanner 50s linear infinite;
   }
-  
+
   @keyframes animatedNewsBanner {
     0% {
       transform: translateX(100%);
