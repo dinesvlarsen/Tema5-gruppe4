@@ -75,7 +75,7 @@ header {
 .header__icons {
 	display: flex;
 	position: relative;
-	z-index: 4;
+	z-index: 5;
 	justify-content: space-between;
 	padding: var(--small-spacing);
 }
@@ -96,7 +96,7 @@ header {
 
 .nav__links {
 	position: relative;
-	z-index: 5;
+	z-index: 4;
 	display: flex;
 	flex-direction: column;
 	font-size: var(--heading-font-size);
@@ -122,6 +122,7 @@ header {
 	.nav__links {
 		font-size: var(--body-font-size);
 		grid-column-start: 7;
+		z-index: 5;
 	}
 
 	.nav__socials {
