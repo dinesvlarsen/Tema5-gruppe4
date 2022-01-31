@@ -1,14 +1,6 @@
 <template>
 	<header>
 		<div class="header__icons">
-			<!-- DISABLED UNTIL FUNCTIONAL -->
-			<!-- <div class="search__icon">
-				<img
-					src="/assets/images/header-icons/Search icon.svg"
-					alt="header"
-				/>
-			</div> -->
-
 			<RouterLink :to="'/'">
 				<div class="nav__logo" aria-label="Go to home">in(dex)</div>
 			</RouterLink>
@@ -64,6 +56,7 @@ export default {
 </script>
 
 <style>
+/* This CSS is made mobile first, so media queries decide the styling on bigger dimensions */
 header {
 	position: sticky;
 	top: 0;
@@ -75,7 +68,7 @@ header {
 .header__icons {
 	display: flex;
 	position: relative;
-	z-index: 4;
+	z-index: 5;
 	justify-content: space-between;
 	padding: var(--small-spacing);
 }
@@ -96,7 +89,7 @@ header {
 
 .nav__links {
 	position: relative;
-	z-index: 5;
+	z-index: 4; /* This needs to be lower than z-index under header__icon for the collapsible to work on mobile */
 	display: flex;
 	flex-direction: column;
 	font-size: var(--heading-font-size);
@@ -127,6 +120,10 @@ header {
 	.nav__socials {
 		display: block;
 		grid-column-start: 9;
+	}
+
+	.header__icons {
+		z-index: 4;
 	}
 }
 </style>
