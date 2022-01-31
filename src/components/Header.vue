@@ -82,7 +82,7 @@ header {
 
 .hamburger__icon {
 	align-self: center;
-	width: 32px;
+	width: 42px;
 }
 
 .nav {
