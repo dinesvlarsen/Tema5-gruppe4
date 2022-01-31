@@ -82,7 +82,7 @@ header {
 
 .hamburger__icon {
 	align-self: center;
-	width: 32px;
+	width: 42px;
 }
 
 .nav {
@@ -95,6 +95,8 @@ header {
 }
 
 .nav__links {
+	position: relative;
+	z-index: 5;
 	display: flex;
 	flex-direction: column;
 	font-size: var(--heading-font-size);
@@ -113,10 +115,13 @@ header {
 		text-align: left;
 	}
 
+	.nav__links,
+	.nav__socials {
+		padding: var(--small-spacing) 0;
+	}
 	.nav__links {
 		font-size: var(--body-font-size);
 		grid-column-start: 7;
-		padding: 0;
 	}
 
 	.nav__socials {
