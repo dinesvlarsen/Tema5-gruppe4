@@ -1,17 +1,24 @@
 <template>
 	<div v-if="!error" class="article-container">
 		<div class="article__heading">
-			<div class="article__author">{{ author }}</div>
-			<h1>{{ title }}</h1>
+			<div class="article__author">{{ article.author }}</div>
+			<h1>{{ article.title }}</h1>
 		</div>
 
 		<figure>
-			<img :src="'/assets/images/' + `${image}`" :alt="alt" />
-			<figcaption>{{ caption }}</figcaption>
+			<img
+				:src="'/assets/images/' + `${article.preview.image}`"
+				:alt="article.preview.alt"
+			/>
+			<figcaption>{{ article.preview.caption }}</figcaption>
 		</figure>
 
 		<article>
-			<p class="article-container__paragraph" v-for="paragraph in body" :key="paragraph">
+			<p
+				class="article-container__paragraph"
+				v-for="paragraph in article.body"
+				:key="paragraph"
+			>
 				{{ paragraph }}
 			</p>
 		</article>
@@ -21,55 +28,29 @@
 </template>
 
 <script>
-import NotFound from './NotFound.vue';
+import NotFound from '../components/NotFound.vue';
+import ArticleData from '/assets/database.js';
 
 export default {
-	inject: ['articleData'],
-	props: ['articleId'],
 	components: { NotFound },
 
 	data() {
 		return {
-			title: '',
-			author: '',
-			slug: '',
-			lead: '',
-			body: '',
-
-			image: '',
-			caption: '',
-			alt: '',
+			article: [],
+			articlesList: ArticleData.articles,
 
 			error: false,
 		};
 	},
 
-	methods: {
-		loadArticle(articleId) {
-			const article = this.articleData.find(
-				(article) => article.slug === articleId
-			);
-
-			//Checks if the article found is valid, and if it is sets all the data matching said article.
-			if (article) {
-				this.title = article.title;
-				this.author = article.author;
-				this.slug = article.slug;
-				this.lead = article.lead;
-				this.body = article.body;
-
-				this.image = article.preview.image;
-				this.caption = article.preview.caption;
-				this.alt = article.preview.alt;
-			} else {
-				//If articleId is not true, uses this prop to display NotFound component instead of article data.
-				this.error = true;
-			}
-		},
-	},
-
 	created() {
-		this.loadArticle(this.articleId);
+		const slug = this.$route.params.articleId;
+		const article = this.articlesList.find((article) => article.slug === slug);
+
+		if (!article) {
+			return this.error = true
+		}
+		this.article = article;
 	},
 };
 </script>
