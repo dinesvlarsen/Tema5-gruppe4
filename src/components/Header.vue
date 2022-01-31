@@ -75,7 +75,7 @@ header {
 .header__icons {
 	display: flex;
 	position: relative;
-	z-index: 4;
+	z-index: 5; /* This z-index needs to be higher than z-index on .nav__links for the collapsible to work on mobile*/
 	justify-content: space-between;
 	padding: var(--small-spacing);
 }
@@ -96,7 +96,7 @@ header {
 
 .nav__links {
 	position: relative;
-	z-index: 5;
+	z-index: 4;
 	display: flex;
 	flex-direction: column;
 	font-size: var(--heading-font-size);
@@ -109,6 +109,10 @@ header {
 }
 
 @media screen and (min-width: 968px) {
+	.header__icons {
+		z-index: 4;
+	}
+
 	.nav__collapsible {
 		display: grid;
 		grid-template-columns: repeat(12, 1fr);
