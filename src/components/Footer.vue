@@ -24,15 +24,15 @@
 	</footer>
 </template>
 
- <script>
- 	export default {};
- </script>
+<script>
+export default {};
+</script>
 
 <style>
 .footer {
 	display: flex;
 	font-style: normal;
-	margin: var(--large-spacing);
+	margin-top: var(--large-spacing);
 	padding: var(--small-spacing);
 	font-size: var(--body-font-size);
 }
